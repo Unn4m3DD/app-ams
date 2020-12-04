@@ -42,7 +42,7 @@ const FoodItem = ({ recommended, price, stars_initial, stared_initial, descripti
               setStars(stars - 1)
             setStared(!stared)
           }}>
-            {stared && <AntDesign style={{ position: "absolute" }} name="star" size={24} color="#fffa00" />}
+            {stared && <AntDesign style={{ position: "absolute" }} name="star" size={24} color="#FFEE00" />}
             <AntDesign name="staro" size={24} color="#aaa" >
             </AntDesign>
           </TouchableOpacity>
