@@ -19,7 +19,7 @@ function App() {
     />
     <View style={{ height: Constants.statusBarHeight, backgroundColor: "#0000" }} />
     <NavigationContainer >
-      <Tab.Navigator initialRouteName="Perfil">
+      <Tab.Navigator initialRouteName="Comida">
         <Tab.Screen
           options={{ tabBarIcon: ({ color, size }) => (<FontAwesome5 name="briefcase-medical" size={size} color={color} />) }}
           name="Veterinário" component={VetScreen}
