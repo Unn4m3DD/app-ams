@@ -1,11 +1,13 @@
 
 import * as React from 'react';
-import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, Animated } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
+
 const { width: g_width, height: g_height } = Dimensions.get("window");
 function ProfileView({ navigation }) {
+  const avatar_size = React.useRef(new Animated.Value(250)).current;
   const user_data = [
     {
       date: "10/04/2020",
@@ -32,6 +34,21 @@ function ProfileView({ navigation }) {
       type: "vet",
       total: "12.43"
     },
+    {
+      date: "10/11/2022",
+      type: "vet",
+      total: "16.43"
+    },
+    {
+      date: "10/11/2021",
+      type: "vet",
+      total: "22.43"
+    },
+    {
+      date: "2/4/2021",
+      type: "food",
+      total: "16.55"
+    },
   ].sort((a, b) => {
     const aa = a.date.split("/");
     const bb = b.date.split("/");
@@ -41,7 +58,14 @@ function ProfileView({ navigation }) {
     }
     return 0;
   })
-  return <ScrollView contentContainerStyle={{ alignItems: "center" }}>
+  return <ScrollView
+    contentContainerStyle={{ alignItems: "center" }}
+    onScroll={(event) => {
+      if (event.nativeEvent.contentOffset.y < 100)
+        avatar_size.setValue(250 - event.nativeEvent.contentOffset.y)
+
+    }}
+  >
     <View style={{ width: "100%" }} >
       <LinearGradient
         colors={['#4287f57f', '#26ed6f7f']}
@@ -49,13 +73,20 @@ function ProfileView({ navigation }) {
         style={{ width: "100%", alignItems: "center" }}
       >
         <View style={{ height: 30 }} />
-        <View style={styles.avatar_shadow}>
+        <Animated.View style={[
+          styles.avatar_shadow,
+          {
+            height: avatar_size,
+            width: avatar_size,
+            borderRadius: avatar_size.__getValue() / 2
+          }
+        ]}>
           <Image
             source={{ uri: "https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg" }}
-            style={styles.avatar_image}
+            style={{ height: "100%", width: "100%", borderRadius: avatar_size.__getValue() / 2 }}
           />
-        </View>
-        <Text style={{ fontSize: 50 }}>Boby</Text>
+        </Animated.View>
+        <Text style={{ fontSize: 40 }}>Boby</Text>
         <Text style={{ fontSize: 20, paddingBottom: 20 }}>José Freitas</Text>
       </LinearGradient>
     </View>
@@ -128,15 +159,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.44,
     shadowRadius: 10.32,
 
-    elevation: 16,
-    height: 200,
-    width: 200,
-    borderRadius: 100,
-  },
-  avatar_image: {
-    height: 200,
-    width: 200,
-    borderRadius: 100,
+    elevation: 16
   }
 });
 export default ProfileView;

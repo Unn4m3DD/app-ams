@@ -2,8 +2,8 @@
 import * as React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
 
-function PerFooView() {
+function PerFoodView() {
   return <View />;
 }
 
-export default PerFooView;
+export default PerFoodView;
