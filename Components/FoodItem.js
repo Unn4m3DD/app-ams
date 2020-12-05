@@ -36,8 +36,8 @@ const FoodItem = ({ recommended, price, stars_initial, stared_initial, descripti
         <Text style={{ fontWeight: "normal", marginVertical: 10 }}>Desde {price}€/Kg</Text>
         <View style={{ borderRadius: 15, paddingHorizontal: 4, backgroundColor: "#eee", height: 30, width: 70, flexDirection: "row", justifyContent: "space-around", alignItems: "center" }}>
           <TouchableOpacity onPress={() => {
-            if (stared)
-              setStars(stars - 1)
+            if (!stared)
+              setStars(stars + 1)
             else
               setStars(stars - 1)
             setStared(!stared)

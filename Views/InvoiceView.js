@@ -33,7 +33,7 @@ function InvoiceView() {
         start={{ x: 0.7, y: 0 }}
         style={{ width: "100%", alignItems: "center", height: 300 }}
       >
-        <Image source={require("./../assets/icon.png")} style={{ position: "absolute", top: 30, left: 30, height: 80, width: 80 }}></Image>
+        <Image source={require("./../assets/icon_transparent.png")} style={{ position: "absolute", top: 30, left: 30, height: 80, width: 80 }}></Image>
         <Text style={{ position: "absolute", top: 30, right: 30, textAlign: "right", fontWeight: "bold" }}>
           {"Urbanização da trindade baixa\nLote 27\n"}
           <Text style={{ fontWeight: "900" }}>10/11/2020</Text>

@@ -4,13 +4,19 @@ import { View, Text, Animated, TouchableOpacity, ScrollView } from 'react-native
 export default function Filter() {
   const filter_screen_height = React.useRef(new Animated.Value(0)).current;
   const [filtersState, setFiltersState] = React.useState(false)
-  const plus_minus_rotation = filter_screen_height.interpolate({ inputRange: [0, 250], outputRange: ["0deg", "360deg"] })
   const filter_data = [
+    {name: "Tipo Animal", options: ["Cão", "Gato", "Periquito"]},
     {
       name: "Raça",
       options: ""
-    }
+    },
+    {name: "Raça"},
+    {name: "Peso"},
+    {name: "Cor"},
   ]
+  const view_height = filter_data.length * 40;
+  const plus_minus_rotation = filter_screen_height.interpolate({ inputRange: [0, view_height], outputRange: ["0deg", "360deg"] })
+  
   return <>
     <TouchableOpacity
       style={{ flexDirection: "row", width: "100%", justifyContent: "center", alignItems: "center", marginTop: 20 }}
@@ -23,7 +29,7 @@ export default function Filter() {
           }).start()
         } else {
           Animated.timing(filter_screen_height, {
-            toValue: 250,
+            toValue: view_height,
             duration: 400,
             useNativeDriver: false,
           }).start()
@@ -43,12 +49,14 @@ export default function Filter() {
       <Text style={{ marginLeft: 10, }}>Adicionar Filtros</Text>
     </TouchableOpacity>
 
-    <Animated.View style={{ height: filter_screen_height, padding: 30 }}>
-      {["Tipo Animal", "Raça", "Peso", "Cor"].map((item, index) => {
-        return <View key={index} style={{ flexDirection: "row", alignItems: "center", marginVertical: 5 }}>
-          <AntDesign name="pluscircle" size={24} color="black" />
-          <Text style={{ marginLeft: 10 }}>{item}</Text>
-        </View>
+    <Animated.View style={{ height: filter_screen_height, paddingHorizontal: 30, overflow: "hidden" }}>
+      {filter_data.map((item, index) => {
+        return (
+          <Animated.View key={index} style={{ flexDirection: "row", alignItems: "center", marginVertical: 5, height: 30 }}>
+            <AntDesign name="pluscircle" size={24} color="black" />
+            <Text style={{ marginLeft: 10 }}>{item.name}</Text>
+          </Animated.View>
+        )
       })}
     </Animated.View>
   </>
