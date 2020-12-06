@@ -6,7 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
 import FindScreen from "./Screens/FindScreen.js";
 import FoodScreen from "./Screens/FoodScreen.js";
-import PetSitterScreen from "./Screens/PetSitterScreen.js";
+import SitterScreen from "./Screens/SitterScreen.js";
 import ProfileScreen from "./Screens/ProfileScreen.js";
 import VetScreen from "./Screens/VetScreen.js";
 import { StatusBar } from 'expo-status-bar';
@@ -19,14 +19,14 @@ function App() {
     />
     <View style={{ height: Constants.statusBarHeight, backgroundColor: "#0000" }} />
     <NavigationContainer >
-      <Tab.Navigator initialRouteName="Encontrar Animal">
+      <Tab.Navigator initialRouteName="Pet Sitter">
         <Tab.Screen
           options={{ tabBarIcon: ({ color, size }) => (<FontAwesome5 name="briefcase-medical" size={size} color={color} />) }}
           name="Veterinário" component={VetScreen}
         />
         <Tab.Screen
           options={{ tabBarIcon: ({ color, size }) => (<Octicons name="person" color={color} size={size} />) }}
-          name="Pet Sitter" component={PetSitterScreen}
+          name="Pet Sitter" component={SitterScreen}
         />
         <Tab.Screen
           options={{ tabBarIcon: ({ color, size }) => (<Entypo name="magnifying-glass" size={size} color={color} />) }}
