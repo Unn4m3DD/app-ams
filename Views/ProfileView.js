@@ -86,7 +86,7 @@ function ProfileView({ navigation }) {
             style={{ height: "100%", width: "100%", borderRadius: avatar_size.__getValue() / 2 }}
           />
         </Animated.View>
-        <Text style={{ fontSize: 40 }}>Boby</Text>
+        <Text style={{ fontSize: 40 }}>Bobby</Text>
         <Text style={{ fontSize: 20, paddingBottom: 20 }}>José Freitas</Text>
       </LinearGradient>
     </View>

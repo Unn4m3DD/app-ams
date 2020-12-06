@@ -38,7 +38,7 @@ function AllSitterView() {
         img_uri="http://148.63.171.198:90/img/team/04.jpg"
         description="Cuidador especialista em cães de grande porte"
         price={13}
-        stars_initial={92}
+        stars_initial={220}
         stared
       />
     </ScrollView>
