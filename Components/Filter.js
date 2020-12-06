@@ -23,7 +23,7 @@ export default function Filter() {
       icon: <MaterialCommunityIcons name="invert-colors" size={24} color="black" />
     },
     {
-      name: "Idade", options: (Array.from(Array(19).keys())).map((item, index) => `${index + 1}kg`),
+      name: "Idade", options: (Array.from(Array(19).keys())).map((item, index) => `${index + 1} Ano`),
       icon: <FontAwesome5 name="baby-carriage" size={24} color="black" />
     },
   ]

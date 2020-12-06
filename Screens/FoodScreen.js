@@ -6,7 +6,7 @@ const Stack = createStackNavigator();
 
 function FoodScreen() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: true, title: "" }}>
+    <Stack.Navigator screenOptions={{ headerShown: false, title: "" }}>
       <Stack.Screen name="AllFoodScreeView" component={AllFoodView} />
       <Stack.Screen name="PerFoodView" component={PerFoodView} />
     </Stack.Navigator>
