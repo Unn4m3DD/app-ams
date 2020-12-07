@@ -2,7 +2,7 @@
   "expo": {
     "name": "PawDemic",
     "icon": "./assets/icon.png",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "slug": "pawdemic",
     "orientation": "portrait",
     "splash": {
@@ -23,7 +23,7 @@
     },
     "android": {
       "package": "com.agp.pawdemic",
-      "versionCode": 2,
+      "versionCode": 3,
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
