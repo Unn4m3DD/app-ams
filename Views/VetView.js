@@ -19,7 +19,7 @@ function VetView() {
           borderRadius: 25,
           backgroundColor: "#bf1919"
         }}>
-        <Text adjustsFontSizeToFit style={{ fontSize: 25, color: "#fff", fontWeight: "bold" }}>Consulta de Emergência</Text>
+        <Text adjustsFontSizeToFit style={{ fontSize: 25, color: "#fff", fontWeight: "bold" }}>Consulta de Urgência</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
