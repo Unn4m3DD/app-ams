@@ -14,7 +14,7 @@ import LoginScreen from './Screens/LoginScreen.js';
 
 const Tab = createBottomTabNavigator();
 function App() {
-  const [loggedIn, setLoggedIn] = React.useState(false)
+  const [loggedIn, setLoggedIn] = React.useState(true)
   return (<>
     <StatusBar
       style={"auto"}

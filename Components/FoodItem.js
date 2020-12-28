@@ -8,25 +8,27 @@ import { Entypo, FontAwesome5, FontAwesome, AntDesign } from '@expo/vector-icons
 const { width: g_width, height: g_height } = Dimensions.get("window");
 // import { Container } from './styles';
 
-const FoodItem = ({ recommended, price, stars_initial, stared_initial, description, img_uri }) => {
+const FoodItem = ({ recommended, price, stars_initial, stared_initial, description, img_uri, navigation }) => {
   const [stared, setStared] = React.useState(stared_initial);
   const [stars, setStars] = React.useState(stars_initial);
   return <View style={{ width: "100%", alignItems: "center", marginVertical: 20 }}>
-    <TouchableOpacity activeOpacity={.95} style={{
-      shadowColor: "#000",
-      shadowOffset: {
-        width: 0,
-        height: 2,
-      },
-      shadowOpacity: 0.25,
-      shadowRadius: 3.84,
-      elevation: 5,
-      width: "95%",
-      height: 300,
-      backgroundColor: "#fff",
-      flexDirection: "row",
-      alignItems: "center"
-    }}>
+    <TouchableOpacity activeOpacity={.95}
+      onPress={() => navigation.navigate('PerFoodView')}
+      style={{
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+        width: "95%",
+        height: 300,
+        backgroundColor: "#fff",
+        flexDirection: "row",
+        alignItems: "center"
+      }}>
       <Image
         style={{ height: 250, width: "50%" }}
         source={{ uri: img_uri }}
