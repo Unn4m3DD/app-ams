@@ -22,7 +22,7 @@ function App() {
     <View style={{ height: Constants.statusBarHeight, backgroundColor: "#0000" }} />
     {!loggedIn && <LoginScreen setLoggedIn={setLoggedIn} />}
     {loggedIn && <NavigationContainer >
-      <Tab.Navigator initialRouteName="Comida">
+      <Tab.Navigator initialRouteName="Pet Sitter">
         <Tab.Screen
           options={{ tabBarIcon: ({ color, size }) => (<FontAwesome5 name="briefcase-medical" size={size} color={color} />) }}
           name="Veterinário" component={VetScreen}

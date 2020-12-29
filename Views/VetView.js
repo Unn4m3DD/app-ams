@@ -5,7 +5,7 @@ import VetCard from '../Components/VetCard';
 import Filter from '../Components/Filter';
 import AnimalItem from '../Components/AnimalItem';
 import FoodItem from '../Components/FoodItem';
-function VetView() {
+function VetView({navigation}) {
   return (
     <ScrollView contentContainerStyle={{ alignItems: "center" }}>
       <VetCard />
@@ -18,7 +18,9 @@ function VetView() {
           width: "90%",
           borderRadius: 25,
           backgroundColor: "#bf1919"
-        }}>
+        }}
+        onPress={() => navigation.navigate('EmergencyView')}
+      >
         <Text adjustsFontSizeToFit style={{ fontSize: 25, color: "#fff", fontWeight: "bold" }}>Consulta de Urgência</Text>
       </TouchableOpacity>
 

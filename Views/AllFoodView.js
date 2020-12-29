@@ -58,14 +58,18 @@ function AllFoodView({ navigation }) {
           stars_initial={212}
         />
       </ScrollView>
-      <TouchableOpacity style={{
-        position: "absolute", bottom: 0, right: 0, left: 0,
-        height: 50,
-        backgroundColor: "#fcfcfc",
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-between"
-      }}>
+      <TouchableOpacity
+        activeOpacity={.9}
+        style={{
+          position: "absolute", bottom: 0, right: 0, left: 0,
+          height: 50,
+          backgroundColor: "#fcfcfc",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between"
+        }}
+        onPress={() => navigation.navigate("CartView")}
+      >
         <View
           style={{
             height: 30,

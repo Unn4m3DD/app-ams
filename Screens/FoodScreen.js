@@ -8,8 +8,8 @@ const Stack = createStackNavigator();
 function FoodScreen() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false, title: "" }}>
-      <Stack.Screen name="CartView" component={CartView} />
       <Stack.Screen name="AllFoodView" component={AllFoodView} />
+      <Stack.Screen name="CartView" component={CartView} />
       <Stack.Screen name="PerFoodView" component={PerFoodView} />
     </Stack.Navigator>
   )

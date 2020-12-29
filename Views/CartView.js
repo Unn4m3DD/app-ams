@@ -5,7 +5,7 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
 const { width: g_width, height: g_height } = Dimensions.get("window");
-function InvoiceView() {
+function InvoiceView({ navigation }) {
   const invoice_data = [
     {
       name: "Ração para pastor alemão, 1Kg",
@@ -83,6 +83,7 @@ function InvoiceView() {
     </View>
     <View style={{ margin: 20, flexDirection: "row", justifyContent: "space-around" }}>
       <TouchableOpacity
+        onPress={() => navigation.navigate("AllFoodView")}
         style={{
           height: 40,
           width: 150,
