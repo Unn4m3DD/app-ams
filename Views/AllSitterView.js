@@ -4,7 +4,7 @@ import { View, Text, Animated, TouchableOpacity, ScrollView } from 'react-native
 import Location from '../Components/Location';
 import Filter from '../Components/Filter';
 import SitterItem from '../Components/SitterItem';
-function AllSitterView() {
+function AllSitterView({navigation}) {
   return (
     <ScrollView contentContainerStyle={{ alignItems: "stretch" }}>
       <Location />
@@ -17,6 +17,7 @@ function AllSitterView() {
         stars_initial={527}
         stared_initial
         recommended
+        navigation={navigation}
       />
       <SitterItem
         name="Denis Yamunaque"
@@ -24,6 +25,7 @@ function AllSitterView() {
         description="Cuidador especialista em gatos"
         price={7}
         stars_initial={92}
+        navigation={navigation}
       />
       <SitterItem
         name="Luísa Amaral"
@@ -32,6 +34,7 @@ function AllSitterView() {
         price={12}
         stars_initial={240}
         recommended
+        navigation={navigation}
       />
       <SitterItem
         name="Pedro Loureiro"
@@ -40,6 +43,7 @@ function AllSitterView() {
         price={13}
         stars_initial={220}
         stared
+        navigation={navigation}
       />
     </ScrollView>
   );

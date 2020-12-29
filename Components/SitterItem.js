@@ -8,7 +8,7 @@ import { Entypo, FontAwesome5, FontAwesome, AntDesign, MaterialIcons } from '@ex
 const { width: g_width, height: g_height } = Dimensions.get("window");
 // import { Container } from './styles';
 
-const SitterItem = ({ name, recommended, price, stars_initial, stared_initial, description, img_uri }) => {
+const SitterItem = ({ name, recommended, price, stars_initial, stared_initial, description, img_uri, navigation }) => {
   const [stared, setStared] = React.useState(stared_initial);
   const [stars, setStars] = React.useState(stars_initial);
   return <View style={{ width: "100%", alignItems: "center", marginVertical: 20 }}>
@@ -24,8 +24,10 @@ const SitterItem = ({ name, recommended, price, stars_initial, stared_initial, d
       width: "95%",
       height: 250,
       backgroundColor: "#fff",
-      alignItems: "center"
-    }}>
+      alignItems: "center",
+    }}
+      onPress={() => navigation.navigate("PerPetSitterView")}
+    >
       <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: 30 }}>
         <Image
           style={{ height: g_width / 3, width: g_width / 3, borderRadius: g_width / 6, marginVertical: 20 }}
