@@ -7,8 +7,8 @@ const Stack = createStackNavigator();
 function SitterScreen() {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="PerPetSitterView" component={PerPetSitterView} />
       <Stack.Screen name="AllSitterView" component={AllSitterView} />
+      <Stack.Screen name="PerPetSitterView" component={PerPetSitterView} />
     </Stack.Navigator>
   )
 }

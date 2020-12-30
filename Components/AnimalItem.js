@@ -7,7 +7,7 @@ import { Entypo, Feather } from '@expo/vector-icons';
 const { width: g_width, height: g_height } = Dimensions.get("window");
 // import { Container } from './styles';
 
-const AnimalItem = ({ animal_weight, animal_color, description, img_uri }) => {
+const AnimalItem = ({ animal_weight, animal_color, description, img_uri, navigation }) => {
   return <View style={{ width: "100%", alignItems: "center", marginVertical: 20 }}>
     <TouchableOpacity activeOpacity={.95} style={{
       shadowColor: "#000",
@@ -22,7 +22,9 @@ const AnimalItem = ({ animal_weight, animal_color, description, img_uri }) => {
       height: 400,
       backgroundColor: "#fff",
       alignItems: "center"
-    }}>
+    }}
+    onPress={()=>navigation.navigate("PerFindView")}
+    >
       <Image
         style={{ height: 250, width: "98%", margin: 5 }}
         source={{ uri: img_uri }}
@@ -40,7 +42,7 @@ const AnimalItem = ({ animal_weight, animal_color, description, img_uri }) => {
             backgroundColor: "#49A05E", justifyContent: "center", alignItems: "center"
           }}>
             <Entypo name="share" size={23} color="white" />
-            <Text style={{color: "#fff", fontSize: 10}}>Partilhar</Text>
+            <Text style={{ color: "#fff", fontSize: 10 }}>Partilhar</Text>
           </TouchableOpacity>
         </TouchableOpacity>
       </View>
@@ -54,7 +56,9 @@ const AnimalItem = ({ animal_weight, animal_color, description, img_uri }) => {
         justifyContent: "space-between",
         borderTopLeftRadius: 158,
         borderBottomLeftRadius: 158,
-      }}><Feather name="alert-circle" size={24} color="white" />
+      }}
+        onPress={() => navigation.navigate("PerFindView")}
+      ><Feather name="alert-circle" size={24} color="white" />
         <Text style={{ color: "#fff", fontWeight: "bold", marginLeft: 10 }}>Este é o meu Animal</Text>
       </TouchableOpacity>
     </TouchableOpacity>
