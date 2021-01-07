@@ -1,0 +1,11 @@
+{
+  "files.exclude": {
+    "node_modules/": true,
+    "babel.config.js": true,
+    ".gitignore": true,
+    "package.json": true,
+    "privacy_policy.md": true,
+    "yarn.lock": true,
+    ".*/": true,
+  },
+}
