@@ -5,27 +5,8 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
 const { width: g_width, height: g_height } = Dimensions.get("window");
-function InvoiceView() {
-  const invoice_data = [
-    {
-      name: "Ração para pastor alemão, 1Kg",
-      price: 13,
-      vat: 23,
-      total: 2
-    },
-    {
-      name: "Ração para periquito, 200g",
-      price: 4,
-      vat: 23,
-      total: 1
-    },
-    {
-      name: "Ração para gato, 2Kg",
-      price: 20,
-      vat: 23,
-      total: 1
-    },
-  ]
+function InvoiceView({ route: { params: { order_info } } }) {
+  const invoice_data = order_info.items
   return <ScrollView>
     <View>
       <LinearGradient
@@ -67,15 +48,15 @@ function InvoiceView() {
     })}
     <View style={{ height: 30, flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 10 }}>
       <Text numberOfLines={1} style={{ flex: 5, textAlign: "right", paddingRight: 10 }}>SubTotal:</Text>
-      <Text numberOfLines={1} style={{ flex: 1, fontSize: 15, fontWeight: "bold" }}>{invoice_data.reduce((total, current) => total + current.price, 0).toFixed(2)}€</Text>
+      <Text numberOfLines={1} style={{ flex: 1, fontSize: 15, fontWeight: "bold" }}>{invoice_data.reduce((total, current) => total + current.price * current.total, 0).toFixed(2)}€</Text>
     </View>
     <View style={{ height: 30, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
       <Text numberOfLines={1} style={{ flex: 5, textAlign: "right", paddingRight: 10 }}>IVA:</Text>
-      <Text numberOfLines={1} style={{ flex: 1, fontSize: 15, fontWeight: "bold" }}>{(invoice_data.reduce((total, current) => total + current.price * ((100 + current.vat)/100 - 1), 0).toFixed(2) + "€").padStart(7, " ")}</Text>
+      <Text numberOfLines={1} style={{ flex: 1, fontSize: 15, fontWeight: "bold" }}>{(invoice_data.reduce((total, current) => total + current.price * current.total * ((100 + current.vat) / 100 - 1), 0).toFixed(2) + "€").padStart(7, " ")}</Text>
     </View>
     <View style={{ height: 30, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
       <Text numberOfLines={1} style={{ flex: 5, textAlign: "right", paddingRight: 10 }}>Total:</Text>
-      <Text numberOfLines={1} style={{ flex: 1, fontSize: 15, fontWeight: "bold" }}>{(invoice_data.reduce((total, current) => total + current.price * (1 + current.vat / 100), 0).toFixed(2) + "€").padStart(7, " ")}</Text>
+      <Text numberOfLines={1} style={{ flex: 1, fontSize: 15, fontWeight: "bold" }}>{(invoice_data.reduce((total, current) => total + current.price * current.total * (1 + current.vat / 100), 0).toFixed(2) + "€").padStart(7, " ")}</Text>
     </View>
   </ScrollView>
 }

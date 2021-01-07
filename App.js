@@ -21,19 +21,42 @@ function App() {
   const [loggedIn, setLoggedIn] = React.useState(false)
   const [userData, setUserData] = React.useState(
     {
-      email: "",
-      name: "",
-      address: "",
-      post_code: "",
-      phone_number: "",
+      email: "default_email",
+      name: "default_name",
+      address: "default_address",
+      post_code: "default_post_code",
+      phone_number: "default_phone_number",
       animal: {
-        image: "",
-        type: "",
-        name: "",
-        birth_date: "",
-        breed: "",
-        proof: ""
-      }
+        image: "https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg" ,
+        type: "default_type",
+        name: "default_name",
+        birth_date: "default_birth_date",
+        breed: "default_breed",
+        proof: "default_proof"
+      },
+      orders: [
+        {
+          date: "10/04/2020",
+          type: "food",
+          items: [
+            {
+              name: "Ração para pastor alemão, 1Kg",
+              price: 13,
+              vat: 23,
+              total: 2
+            },
+            {
+              name: "Ração para periquito, 200g",
+              price: 4,
+              vat: 23,
+              total: 1
+            }
+          ],
+          get total() {
+            return this.items.reduce((prev, current) => prev + current.price * (1 + current.vat / 100) * current.total)
+          }
+        }
+      ]
     }
   )
   console.log(UserDataContext)
@@ -58,7 +81,7 @@ function App() {
           }}
         >
           <Tab.Screen
-            options={{ tabBarIcon: ({ color, size }) => {  return (<FontAwesome5 name="briefcase-medical" size={22} color={color} />) } }}
+            options={{ tabBarIcon: ({ color, size }) => { return (<FontAwesome5 name="briefcase-medical" size={22} color={color} />) } }}
             name="Veterinário" component={VetScreen}
           />
           <Tab.Screen
@@ -84,3 +107,4 @@ function App() {
   );
 }
 export default App;
+

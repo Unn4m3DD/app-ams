@@ -4,52 +4,13 @@ import { View, Text, Image, StyleSheet, Dimensions, Animated } from 'react-nativ
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
+import { UserDataContext } from '../Contexts/UserDataContext';
 
 const { width: g_width, height: g_height } = Dimensions.get("window");
 function ProfileView({ navigation }) {
+  const { userData, setUserData } = React.useContext(UserDataContext);
   const avatar_size = React.useRef(new Animated.Value(250)).current;
-  const user_data = [
-    {
-      date: "10/04/2020",
-      type: "vet",
-      total: "13.30"
-    },
-    {
-      date: "11/01/2020",
-      type: "food",
-      total: "16.12"
-    },
-    {
-      date: "28/06/2020",
-      type: "food",
-      total: "25.53"
-    },
-    {
-      date: "08/04/2019",
-      type: "vet",
-      total: "61.32"
-    },
-    {
-      date: "10/10/2021",
-      type: "vet",
-      total: "12.43"
-    },
-    {
-      date: "10/11/2022",
-      type: "vet",
-      total: "16.43"
-    },
-    {
-      date: "10/11/2021",
-      type: "vet",
-      total: "22.43"
-    },
-    {
-      date: "2/4/2021",
-      type: "food",
-      total: "16.55"
-    },
-  ].sort((a, b) => {
+  const user_orders = userData.orders.sort((a, b) => {
     const aa = a.date.split("/");
     const bb = b.date.split("/");
     for (let i = 2; i >= 0; i--) {
@@ -82,32 +43,32 @@ function ProfileView({ navigation }) {
           }
         ]}>
           <Image
-            source={{ uri: "https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg" }}
+            source={{ uri: userData.animal.image }}
             style={{ height: "100%", width: "100%", borderRadius: avatar_size.__getValue() / 2 }}
           />
         </Animated.View>
-        <Text style={{ fontSize: 40 }}>Bobby</Text>
-        <Text style={{ fontSize: 20, paddingBottom: 20 }}>José Freitas</Text>
+        <Text style={{ fontSize: 40 }}>{userData.animal.name}</Text>
+        <Text style={{ fontSize: 20, paddingBottom: 20 }}>{userData.name}</Text>
       </LinearGradient>
     </View>
 
     <View style={{ flex: 1, height: 100, width: "100%", flexDirection: "row" }}>
       <TouchableOpacity style={[styles.info_button, { backgroundColor: "#4287f5bb" }]}>
-        <Text style={styles.number_text}>2</Text>
+        <Text style={styles.number_text}>{userData.orders.reduce((prev, current) => prev + (current.type === "vet" ? 1 : 0), 0)}</Text>
         <Text style={styles.description_text}>Consultas</Text>
       </TouchableOpacity>
       <TouchableOpacity style={[styles.info_button, { backgroundColor: "#26ed6f77" }]}>
-        <Text style={styles.number_text}>3</Text>
+        <Text style={styles.number_text}>{userData.orders.reduce((prev, current) => prev + (current.type === "food" ? 1 : 0), 0)}</Text>
         <Text style={[styles.description_text, { color: "#00000099" }]}>Encomendas</Text>
       </TouchableOpacity>
     </View>
 
-    {user_data.map((item, index) => {
+    {user_orders.map((item, index) => {
       return (
         <TouchableOpacity
           style={{ width: g_width, backgroundColor: "#f2f2f2", height: 90, padding: 13, justifyContent: "space-between" }}
           key={index}
-          onPress={() => navigation.navigate('InvoiceView')}
+          onPress={() => navigation.navigate('InvoiceView', { order_info: item })}
         >
           <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
             <Text style={{ fontSize: 20, fontWeight: "bold", color: "#000" }}>
@@ -124,7 +85,7 @@ function ProfileView({ navigation }) {
             <Text style={{ fontSize: 20, fontWeight: "bold", color: "#000" }}>
               {"Total: "}
               <Text style={{ fontWeight: "normal", color: "#000b" }}>
-                {item.total}€
+                {item.items.reduce((prev, current) => prev + current.price * (1 + current.vat / 100) * current.total, 0).toFixed(2)}€
                 </Text>
             </Text>
           </View>
