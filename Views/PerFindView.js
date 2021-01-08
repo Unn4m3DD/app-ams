@@ -2,19 +2,14 @@
 import * as React from 'react';
 import { View, Text, ScrollView, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
+import { FindItemsContext } from '../Contexts/FindItemsContext';
 const { width: g_width, height: g_height } = Dimensions.get("window");
 
-function PerFindView({ navigation }) {
-  const [currentStars, setCurrentStars] = React.useState(0);
-  const data = {
-    img_uri: "https://static.wixstatic.com/media/4a5235_1bfcde2b7ca743a5a8b65c885aa5d77b~mv2.jpg/v1/fill/w_1000,h_571,al_c,q_90,usm_0.66_1.00_0.01/4a5235_1bfcde2b7ca743a5a8b65c885aa5d77b~mv2.jpg",
-    description: "Dogoo encontrado em Almada",
-    weight: 8.82,
-    date: "4 Janeiro 2020",
-    color: "#eb8934",
-    age: 8,
-    location: "Rua Maria da Penha e dos 7 Anões"
-  }
+function PerFindView({ navigation, route }) {
+  const { findItems, setFindItems } = React.useContext(FindItemsContext);
+
+  const data = route.params
+  //{ animal_weight, animal_color, description, img_uri, navigation }
   return <>
     <ScrollView contentContainerStyle={{ margin: 20 }}>
       <View style={{
@@ -40,20 +35,20 @@ function PerFindView({ navigation }) {
         <Text>Data em que foi encontrado:</Text><Text>{data.date}</Text>
       </View>
       <View style={styles.table_item}>
-        <Text>Peso:</Text><Text>{data.weight}kg</Text>
+        <Text>Peso:</Text><Text>{data.animal_weight}kg</Text>
       </View>
       <View style={styles.table_item}>
-        <Text>Encontrado em:</Text><Text>{data.location}</Text>
+        <Text>Encontrado em:</Text><Text style={{ marginLeft: 25, }} adjustsFontSizeToFit numberOfLines={1}>{data.location}</Text>
       </View>
       <View style={styles.table_item}>
-        <Text>Raça:</Text><Text>Felpudinho</Text>
+        <Text>Raça:</Text><Text>{data.breed}</Text>
       </View>
       <View style={styles.table_item}>
-        <Text>Idade(aproximada):</Text><Text>{data.age + " anos"}</Text>
+        <Text>Idade(aproximada):</Text><Text>{data.age + (typeof (data.age) == typeof ("") ? "" : " anos")}</Text>
       </View>
       <View style={styles.table_item}>
         <Text style={{ paddingVertical: 2 }}>Cor:</Text>
-        <View style={{ backgroundColor: data.color, padding: 2, color: "#fff", width: 70 }}></View>
+        <View style={{ backgroundColor: data.color, padding: 2, color: "#fff", width: 70, height: 20 }}></View>
       </View>
     </ScrollView>
     <TouchableOpacity activeOpacity={.90} style={{
@@ -67,7 +62,12 @@ function PerFindView({ navigation }) {
       borderTopLeftRadius: 25,
       borderBottomLeftRadius: 25,
     }}
-      onPress={() => navigation.navigate('AllFindView')}
+      onPress={() => {
+        setFindItems(
+          [...(findItems.filter((item) => item.description != data.description))]
+        )
+        navigation.navigate('AllFindView')
+      }}
     ><FontAwesome5 name="dog" size={30} color="white" />
       <Text style={{ color: "#fff", fontWeight: "bold", marginLeft: 10, fontSize: 18 }}>Encontrei / Este é o meu animal</Text>
     </TouchableOpacity>
@@ -79,7 +79,8 @@ const styles = StyleSheet.create({
     height: 23,
     flexDirection: "row",
     width: "100%",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    alignItems: "center"
   }
 });
 export default PerFindView;

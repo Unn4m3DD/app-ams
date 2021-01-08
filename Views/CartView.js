@@ -92,7 +92,6 @@ function InvoiceView({ navigation }) {
         }}
         onPress={() => {
           if (userData.cart.length == 0) return
-          console.log(userData.cart)
           const date = new Date();
           setUserData({
             ...userData, cart: [], orders: [

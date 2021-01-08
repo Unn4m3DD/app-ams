@@ -7,7 +7,7 @@ import { Entypo, Feather } from '@expo/vector-icons';
 const { width: g_width, height: g_height } = Dimensions.get("window");
 // import { Container } from './styles';
 
-const AnimalItem = ({ animal_weight, animal_color, description, img_uri, navigation }) => {
+const AnimalItem = ({ date, breed, age, animal_weight, animal_color, img_uri, description, location, color, navigation, }) => {
   return <View style={{ width: "100%", alignItems: "center", marginVertical: 20 }}>
     <TouchableOpacity activeOpacity={.95} style={{
       shadowColor: "#000",
@@ -23,7 +23,7 @@ const AnimalItem = ({ animal_weight, animal_color, description, img_uri, navigat
       backgroundColor: "#fff",
       alignItems: "center"
     }}
-    onPress={()=>navigation.navigate("PerFindView")}
+      onPress={() => navigation.navigate("PerFindView", { date, breed, age, animal_weight, animal_color, img_uri, description, navigation, color, location })}
     >
       <Image
         style={{ height: 250, width: "98%", margin: 5 }}
