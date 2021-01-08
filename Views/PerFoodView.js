@@ -2,21 +2,24 @@
 import * as React from 'react';
 import { View, Text, ScrollView, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
+import { UserDataContext } from '../Contexts/UserDataContext';
 const { width: g_width, height: g_height } = Dimensions.get("window");
 
-function PerFoodView({navigation}) {
+function PerFoodView({ navigation, route }) {
   const [currentStars, setCurrentStars] = React.useState(0);
+  const { userData, setUserData } = React.useContext(UserDataContext)
   const data = {
-    stared: true,
-    price: 5.52,
-    img_uri: "https://www.petstock.com.au/images/cache/product_feature/images/products/5f8f80e3d51881.37176137.jpeg",
-    description: "Ração de Frango para Cão Adulto Médio",
-    stars_initial: 212,
-    stared_initial: true,
-    recommended: true
+    stared: route.params.stared,
+    price: route.params.price,
+    vat: route.params.vat,
+    img_uri: route.params.img_uri,
+    name: route.params.description,
+    stars_initial: route.params.stars_initial,
+    stared_initial: route.params.stared_initial,
+    recommended: route.params.recommended,
   }
   return <>
-    <TouchableOpacity activeOpacity={.90} style={{
+    {data.recommended && <TouchableOpacity activeOpacity={.90} style={{
       position: "absolute", top: 10, left: 0,
       zIndex: 1,
       width: "70%",
@@ -31,7 +34,7 @@ function PerFoodView({navigation}) {
     }}>
       <AntDesign name="star" size={24} color="white" />
       <Text style={{ color: "#fff", fontWeight: "bold", marginLeft: 10 }}>Recomendado Pelo Seu Veterinário</Text>
-    </TouchableOpacity>
+    </TouchableOpacity>}
 
     <ScrollView contentContainerStyle={{ margin: 20 }}>
       <View style={{
@@ -48,7 +51,7 @@ function PerFoodView({navigation}) {
         }}>
           <Image source={{ uri: data.img_uri }} style={{ height: 130, width: 130, borderRadius: 75 }} />
         </View>
-        <Text numberOfLines={2} style={{ fontSize: 18, fontWeight: "bold", marginRight: 180, marginLeft: 10 }}>{data.description}</Text>
+        <Text numberOfLines={2} style={{ fontSize: 18, fontWeight: "bold", marginRight: 180, marginLeft: 10 }}>{data.name}</Text>
       </View>
       <Text style={{ marginTop: 10, fontSize: 20, }}>
         Informação Extra
@@ -75,7 +78,13 @@ function PerFoodView({navigation}) {
         <Text>Peso Liquido:</Text><Text>10kg</Text>
       </View>
       <View style={styles.table_item}>
-        <Text>Preço Unidade:</Text><Text>45.32€</Text>
+        <Text>Preço Unidade:</Text><Text>{data.price}€</Text>
+      </View>
+      <View style={styles.table_item}>
+        <Text>IVA:</Text><Text>{data.vat}%</Text>
+      </View>
+      <View style={styles.table_item}>
+        <Text>Preço Final:</Text><Text>{(data.price * (1 + data.vat / 100)).toFixed(2)}€</Text>
       </View>
       <View style={{ alignItems: "center", marginTop: 50 }}>
         <Text style={{ fontSize: 30, fontWeight: "bold" }}>Dê-nos a sua opinião</Text>
@@ -116,7 +125,20 @@ function PerFoodView({navigation}) {
       borderTopLeftRadius: 25,
       borderBottomLeftRadius: 25,
     }}
-      onPress={() => navigation.navigate('AllFoodView')}
+      onPress={() => {
+        const tmp_user_data_cart = JSON.parse(JSON.stringify(userData.cart))
+        for (let i = 0; i < tmp_user_data_cart.length; i++) {
+          if (tmp_user_data_cart[i].name == data.name) {
+            tmp_user_data_cart[i].total++
+            setUserData({ ...userData, cart: tmp_user_data_cart })
+            navigation.navigate('AllFoodView')
+            return
+          }
+        }
+        tmp_user_data_cart.push({ name: data.name, price: data.price, total: 1, vat: 23 })
+        setUserData({ ...userData, cart: tmp_user_data_cart })
+        navigation.navigate('AllFoodView')
+      }}
     >
       <AntDesign name="shoppingcart" size={30} color="white" />
       <Text style={{ color: "#fff", fontWeight: "bold", marginLeft: 10, fontSize: 18 }}>Adicionar ao Carrinho</Text>

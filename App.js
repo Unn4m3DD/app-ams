@@ -13,6 +13,7 @@ import { StatusBar } from 'expo-status-bar';
 import LoginScreen from './Screens/LoginScreen.js';
 import { UserDataContext } from "./Contexts/UserDataContext.js"
 import { LogBox } from 'react-native';
+import default_user_data from "./Contexts/DefaultUserData"
 LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
 ]);
@@ -21,46 +22,29 @@ function App() {
   const [loggedIn, setLoggedIn] = React.useState(false)
   const [userData, setUserData] = React.useState(
     {
-      email: "default_email",
-      name: "default_name",
-      address: "default_address",
-      post_code: "default_post_code",
-      phone_number: "default_phone_number",
+      email: "",
+      name: "",
+      address: "",
+      post_code: "",
+      phone_number: "",
       animal: {
-        image: "https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg" ,
-        type: "default_type",
-        name: "default_name",
-        birth_date: "default_birth_date",
-        breed: "default_breed",
-        proof: "default_proof"
+        image: "",
+        type: "",
+        name: "",
+        birth_date: "",
+        breed: "",
+        proof: ""
       },
       orders: [
-        {
-          date: "10/04/2020",
-          type: "food",
-          items: [
-            {
-              name: "Ração para pastor alemão, 1Kg",
-              price: 13,
-              vat: 23,
-              total: 2
-            },
-            {
-              name: "Ração para periquito, 200g",
-              price: 4,
-              vat: 23,
-              total: 1
-            }
-          ],
-          get total() {
-            return this.items.reduce((prev, current) => prev + current.price * (1 + current.vat / 100) * current.total)
-          }
-        }
+      ],
+      cart: [
       ]
     }
   )
-  console.log(UserDataContext)
-
+  React.useEffect(() => {
+    if (loggedIn)
+      setUserData(default_user_data)
+  }, [])
   return (<>
     <StatusBar
       style={"auto"}
@@ -69,7 +53,7 @@ function App() {
       <View style={{ height: Constants.statusBarHeight, backgroundColor: "#0000" }} />
       {!loggedIn && <NavigationContainer><LoginScreen setLoggedIn={setLoggedIn} /></NavigationContainer>}
       {loggedIn && <NavigationContainer>
-        <Tab.Navigator initialRouteName="Encontrar" tabBarPosition="bottom"
+        <Tab.Navigator initialRouteName="Comida" tabBarPosition="bottom"
           tabBarOptions={{
             showIcon: true,
             labelStyle: {

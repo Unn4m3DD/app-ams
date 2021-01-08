@@ -8,12 +8,12 @@ import { Entypo, FontAwesome5, FontAwesome, AntDesign } from '@expo/vector-icons
 const { width: g_width, height: g_height } = Dimensions.get("window");
 // import { Container } from './styles';
 
-const FoodItem = ({ recommended, price, stars_initial, stared_initial, description, img_uri, navigation }) => {
+const FoodItem = ({ recommended, price, stars_initial, stared_initial, description, img_uri, navigation, vat }) => {
   const [stared, setStared] = React.useState(stared_initial);
   const [stars, setStars] = React.useState(stars_initial);
   return <View style={{ width: "100%", alignItems: "center", marginVertical: 20 }}>
     <TouchableOpacity activeOpacity={.95}
-      onPress={() => navigation.navigate('PerFoodView')}
+      onPress={() => navigation.navigate('PerFoodView', { recommended, price, stars_initial, stared_initial, description, img_uri, vat })}
       style={{
         shadowColor: "#000",
         shadowOffset: {

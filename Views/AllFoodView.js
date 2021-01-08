@@ -3,11 +3,13 @@ import * as React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, ScrollView, TouchableOpacity } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
 import FoodItem from '../Components/FoodItem';
+import { UserDataContext } from '../Contexts/UserDataContext';
 
 function AllFoodView({ navigation }) {
+  const { userData, setUserData } = React.useContext(UserDataContext)
   return (
     <>
-      <ScrollView contentContainerStyle={{ alignItems: "stretch" }}>
+      <ScrollView contentContainerStyle={{ alignItems: "stretch", paddingBottom: 30 }}>
         <TouchableOpacity style={{ width: "100%", height: 80, alignItems: "center", padding: 20 }} activeOpacity={.7}>
           <View
             style={{
@@ -34,6 +36,7 @@ function AllFoodView({ navigation }) {
           navigation={navigation}
           stared={true}
           price={5.52}
+          vat={23}
           img_uri="https://www.petstock.com.au/images/cache/product_feature/images/products/5f8f80e3d51881.37176137.jpeg"
           description="Ração de Frango para Cão Adulto Médio"
           stars_initial={212}
@@ -44,6 +47,7 @@ function AllFoodView({ navigation }) {
           navigation={navigation}
           stared={true}
           price={7.24}
+          vat={23}
           img_uri="https://www.petstock.com.au/images/cache/product_feature/images/products/5f8f8223a68f20.55145015.jpeg"
           description="Ração de Frango para Cão Adulto Grande"
           stars_initial={125}
@@ -52,11 +56,13 @@ function AllFoodView({ navigation }) {
           navigation={navigation}
           stared={true}
           price={3.77}
+          vat={23}
           img_uri="https://www.petstock.com.au/images/cache/product_feature/images/products/5f8f83f7069d04.75412903.jpeg"
           description="Ração de Frango para Cão Adulto Pequeno"
           stared_initial
           stars_initial={212}
         />
+        <View style={{height: 10}}/>
       </ScrollView>
       <TouchableOpacity
         activeOpacity={.9}
@@ -84,10 +90,10 @@ function AllFoodView({ navigation }) {
           <Text style={{
             fontSize: 18,
             fontWeight: "bold", textAlign: "center", color: "#fff"
-          }}>3</Text>
+          }}>{userData.cart.reduce((prev, current) => prev + current.total, 0)}</Text>
         </View>
         <Text style={{ margin: 20 }}>Ver Carrinho</Text>
-        <Text style={{ margin: 20 }}>45.02€</Text>
+        <Text style={{ margin: 20 }}>{userData.cart.reduce((total, current) => total + current.price * current.total * (1 + current.vat / 100), 0).toFixed(2) + "€"}</Text>
       </TouchableOpacity>
     </>
   );
