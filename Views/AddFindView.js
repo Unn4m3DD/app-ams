@@ -3,6 +3,7 @@ import * as React from 'react';
 import { View, Text, ScrollView, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { Entypo, FontAwesome5, Octicons, AntDesign, MaterialCommunityIcons } from '@expo/vector-icons';
 import { TextInput } from 'react-native-gesture-handler';
+import ImagePick from '../Components/ImagePick';
 const { width: g_width, height: g_height } = Dimensions.get("window");
 
 function PerFindView({ navigation }) {
@@ -21,18 +22,7 @@ function PerFindView({ navigation }) {
         flexDirection: "row",
         alignItems: "center"
       }}>
-        <View style={{
-          height: 150,
-          width: 150,
-          borderRadius: 75,
-          backgroundColor: "#ddd",
-          alignItems: "center",
-          justifyContent: "center",
-        }}>
-          <View style={{ height: 130, width: 130, borderRadius: 75, backgroundColor: "#fff", justifyContent: "center", alignItems: "center" }}>
-            <AntDesign name="camerao" size={70} color="black" />
-          </View>
-        </View>
+        <ImagePick setExternalImage={() => { }} />
         <View style={{
           width: 300, marginLeft: 10
         }}>

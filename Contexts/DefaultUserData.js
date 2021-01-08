@@ -13,37 +13,25 @@ export default {
     proof: "default_proof"
   },
   orders: [
-    {
-      date: "10/04/2020",
-      type: "food",
-      items: [
-        {
-          name: "Ração para pastor alemão, 1Kg",
-          price: 13,
-          vat: 23,
-          total: 2
-        },
-        {
-          name: "Ração para periquito, 200g",
-          price: 4,
-          vat: 23,
-          total: 1
-        }
-      ],
-    }
+    // {
+    //   date: "10/04/2020",
+    //   type: "food",
+    //   items: [
+    //     {
+    //       name: "Ração para pastor alemão, 1Kg",
+    //       price: 13,
+    //       vat: 23,
+    //       total: 2
+    //     },
+    //     {
+    //       name: "Ração para periquito, 200g",
+    //       price: 4,
+    //       vat: 23,
+    //       total: 1
+    //     }
+    //   ],
+    // }
   ],
   cart: [
-    {
-      name: "Ração para pastor alemão, 1Kg",
-      price: 13,
-      vat: 23,
-      total: 2
-    },
-    {
-      name: "Ração para periquito, 200g",
-      price: 4,
-      vat: 23,
-      total: 1
-    }
   ]
 }

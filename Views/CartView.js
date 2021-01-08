@@ -7,7 +7,7 @@ import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
 import { UserDataContext } from '../Contexts/UserDataContext';
 const { width: g_width, height: g_height } = Dimensions.get("window");
 function InvoiceView({ navigation }) {
-  const { userData } = React.useContext(UserDataContext)
+  const { userData, setUserData } = React.useContext(UserDataContext)
   return <ScrollView>
     <View>
       <LinearGradient
@@ -48,8 +48,8 @@ function InvoiceView({ navigation }) {
       )
     })}
     <View style={{ height: 30, flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginTop: 10 }}>
-      <Text numberOfLines={1} style={{ flex: 5, textAlign: "right", paddingRight: 10 }}>SubTotal:</Text>
-      <Text numberOfLines={1} style={{ flex: 1, fontSize: 15, fontWeight: "bold" }}>{userData.cart.reduce((total, current) => total + current.price * current.total, 0).toFixed(2)}€</Text>
+      <Text numberOfLines={1} style={{ flex: 5, textAlign: "right", paddingRight: 10, }}>SubTotal:</Text>
+      <Text numberOfLines={1} style={{ flex: 1, fontSize: 15, fontWeight: "bold" }}>{(userData.cart.reduce((total, current) => total + current.price * current.total, 0).toFixed(2) + "€").padStart(7, " ")}</Text>
     </View>
     <View style={{ height: 30, flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
       <Text numberOfLines={1} style={{ flex: 5, textAlign: "right", paddingRight: 10 }}>IVA:</Text>
@@ -86,10 +86,27 @@ function InvoiceView({ navigation }) {
           height: 40,
           width: 150,
           borderRadius: 20,
-          backgroundColor: "#37c2d8",
+          backgroundColor: `#17a2b8${userData.cart.length > 0 ? "ff" : "44"}`,
           alignItems: "center",
           justifyContent: "center"
-        }}>
+        }}
+        onPress={() => {
+          if (userData.cart.length == 0) return
+          console.log(userData.cart)
+          const date = new Date();
+          setUserData({
+            ...userData, cart: [], orders: [
+              {
+                type: "food",
+                date: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
+                items: [...userData.cart]
+              },
+              ...userData.orders
+            ]
+          })
+          navigation.goBack()
+        }}
+      >
         <Text style={{
           color: "#fff",
           fontWeight: "bold"
@@ -103,3 +120,7 @@ function InvoiceView({ navigation }) {
 const styles = StyleSheet.create({
 });
 export default InvoiceView;
+
+const is_primer = (number) => {
+
+}

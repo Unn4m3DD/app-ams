@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Entypo } from '@expo/vector-icons';
+import { UserDataContext } from '../Contexts/UserDataContext';
 export default function Location() {
+  const { userData } = React.useContext(UserDataContext);
   return <TouchableOpacity style={{ width: "100%", height: 80, alignItems: "center", padding: 20 }} activeOpacity={.7}>
     <View
       style={{
@@ -17,10 +19,10 @@ export default function Location() {
     >
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <Entypo name="location-pin" size={24} color="black" />
-        <Text style={{ fontSize: 15, fontWeight: "bold" }}>{"  Rua Lilali, Almada"}</Text>
+        <Text style={{ fontSize: 15, fontWeight: "bold" }}>{"  " + userData.address}</Text>
       </View>
       <Text style={{ fontSize: 12, fontWeight: "bold" }}>
-        3290-331
+        {userData.post_code}
       </Text>
     </View>
   </TouchableOpacity >

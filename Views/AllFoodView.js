@@ -4,34 +4,14 @@ import { View, Text, Image, StyleSheet, Dimensions, ScrollView, TouchableOpacity
 import { Entypo } from '@expo/vector-icons';
 import FoodItem from '../Components/FoodItem';
 import { UserDataContext } from '../Contexts/UserDataContext';
+import Location from '../Components/Location';
 
 function AllFoodView({ navigation }) {
   const { userData, setUserData } = React.useContext(UserDataContext)
   return (
     <>
       <ScrollView contentContainerStyle={{ alignItems: "stretch", paddingBottom: 30 }}>
-        <TouchableOpacity style={{ width: "100%", height: 80, alignItems: "center", padding: 20 }} activeOpacity={.7}>
-          <View
-            style={{
-              width: "90%",
-              height: 60,
-              borderRadius: 30,
-              backgroundColor: "#fff",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-              paddingHorizontal: 20
-            }}
-          >
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Entypo name="location-pin" size={24} color="black" />
-              <Text style={{ fontSize: 15, fontWeight: "bold" }}>{"  Rua Lilali, Almada"}</Text>
-            </View>
-            <Text style={{ fontSize: 12, fontWeight: "bold" }}>
-              3290-331
-        </Text>
-          </View>
-        </TouchableOpacity >
+        <Location/>
         <FoodItem
           navigation={navigation}
           stared={true}
@@ -61,6 +41,7 @@ function AllFoodView({ navigation }) {
           description="Ração de Frango para Cão Adulto Pequeno"
           stared_initial
           stars_initial={212}
+          sold_out
         />
         <View style={{height: 10}}/>
       </ScrollView>

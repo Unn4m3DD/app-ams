@@ -118,7 +118,7 @@ function PerFoodView({ navigation, route }) {
       position: "absolute", bottom: 20, right: 0,
       height: 50,
       paddingHorizontal: 10,
-      backgroundColor: "#37c2d8",
+      backgroundColor: `#37c2d8${route.params.sold_out ? "88" : "ff"}`,
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",
@@ -126,6 +126,7 @@ function PerFoodView({ navigation, route }) {
       borderBottomLeftRadius: 25,
     }}
       onPress={() => {
+        if (!route.params.sold_out) return
         const tmp_user_data_cart = JSON.parse(JSON.stringify(userData.cart))
         for (let i = 0; i < tmp_user_data_cart.length; i++) {
           if (tmp_user_data_cart[i].name == data.name) {
@@ -141,7 +142,7 @@ function PerFoodView({ navigation, route }) {
       }}
     >
       <AntDesign name="shoppingcart" size={30} color="white" />
-      <Text style={{ color: "#fff", fontWeight: "bold", marginLeft: 10, fontSize: 18 }}>Adicionar ao Carrinho</Text>
+      <Text style={{ color: "#fff", fontWeight: "bold", marginLeft: 10, fontSize: 18 }}>{route.params.sold_out ? "Sem Stock" : "Adicionar ao Carrinho"}</Text>
     </TouchableOpacity>
   </>
 }
