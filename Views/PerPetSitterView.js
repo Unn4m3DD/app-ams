@@ -1,6 +1,6 @@
 
 import * as React from 'react';
-import { View, Text, ScrollView, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, Image, StyleSheet, Dimensions, TouchableOpacity, Alert } from 'react-native';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
 const { width: g_width, height: g_height } = Dimensions.get("window");
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -126,7 +126,10 @@ function PerPetSitterView({ navigation }) {
       borderTopLeftRadius: 25,
       borderBottomLeftRadius: 25,
     }}
-      onPress={() => navigation.navigate('AllSitterView')}
+      onPress={() => {
+        Alert.alert("","Será contactado pelo pet sitter durante as próximas 24 horas")
+        navigation.navigate('AllSitterView')
+      }}
     >
       <AntDesign name="shoppingcart" size={30} color="white" />
       <Text style={{ color: "#fff", fontWeight: "bold", marginLeft: 10, fontSize: 18 }}>Reservar Pet Sitter</Text>

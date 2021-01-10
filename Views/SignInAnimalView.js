@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Image, TouchableOpacity, Text, ScrollView, Picker } from 'react-native';
+import { View, Image, TouchableOpacity, Text, ScrollView, Picker, Alert } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import { AntDesign, Entypo } from '@expo/vector-icons';
 import ImagePick from '../Components/ImagePick';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import * as DocumentPicker from 'expo-document-picker';
 import { UserDataContext } from "../Contexts/UserDataContext.js"
+import firebase from "./../services/firebase"
 
 function SignInAnimalView({ route }) {
   const { userData, setUserData } = React.useContext(UserDataContext);
@@ -53,13 +54,31 @@ function SignInAnimalView({ route }) {
       <TouchableOpacity
         accessibilityState={{ disabled: true }}
         onPress={() => {
-          if (Object.values(userData.animal).reduce((prev, current) => prev && current.length > 0, true))
-            route.params.setLoggedIn(true)
+          if (Object.values(userData.animal).reduce((prev, current) => { return prev && current && current.length > 0 }, true)) {
+            firebase.auth().createUserWithEmailAndPassword(
+              userData.email,
+              userData.password1
+            ).then(async (user) => {
+              const user_data_copy = JSON.parse(JSON.stringify(userData))
+              user_data_copy.cart = ""
+              delete user_data_copy.cart
+              user_data_copy.image = ""
+              delete user_data_copy.image
+              firebase
+                .database()
+                .ref('users/' + user.user.uid)
+                .set(
+                  user_data_copy
+                )
+              await firebase.storage().ref().child(user.user.uid).putString(userData.animal.image)
+              route.params.setLoggedIn(true)
+            }).catch((error) => Alert.alert("", error.message));
+          }
         }}
         style={{
           width: "80%",
           backgroundColor:
-            `#17a2b8${Object.values(userData.animal).reduce((prev, current) => prev && current.length > 0, true)
+            `#17a2b8${Object.values(userData.animal).reduce((prev, current) => { return prev && current && current.length > 0 }, true)
               ? "ff" : "44"}`,
           height: 65,
           borderRadius: 32, justifyContent: "center", alignItems: "center", marginVertical: 10

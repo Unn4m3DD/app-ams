@@ -43,7 +43,7 @@ function ProfileView({ navigation }) {
           }
         ]}>
           <Image
-            source={{ uri: userData.animal.image }}
+            source={{ uri: `data:image/jpeg;base64,${userData.animal.image}` }}
             style={{ height: "100%", width: "100%", borderRadius: avatar_size.__getValue() / 2 }}
           />
         </Animated.View>

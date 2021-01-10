@@ -7,8 +7,8 @@ import { UserDataContext } from "../Contexts/UserDataContext.js"
 
 function SignInView({ navigation }) {
   const { userData, setUserData } = React.useContext(UserDataContext);
-  const [pass1, setPass1] = React.useState("")
-  const [pass2, setPass2] = React.useState("")
+  let email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
   return <KeyboardAwareScrollView >
     <View style={{ alignItems: "center", height: "100%" }}>
       <View style={{ width: "100%" }}>
@@ -19,10 +19,15 @@ function SignInView({ navigation }) {
         value={userData.email}
         onChangeText={(text) => setUserData({ ...userData, email: text })} style={{ width: "80%", marginVertical: 10 }} >
       </TextInput>
+      {userData.email.length > 0 && !email.test(userData.email) && <Text style={{ color: "#f33", fontSize: 9 }}>Insira um email valido</Text>}
       <TextInput label="Password*" autoCapitalize="none" secureTextEntry={true}
-        onChangeText={(text) => setPass1(text)} style={{ width: "80%", marginVertical: 10 }} value={pass1} />
+        onChangeText={(text) => setUserData({ ...userData, password1: text })} style={{ width: "80%", marginVertical: 10 }} value={userData.password1} />
+      {userData.password1.length > 0 && userData.password1.length < 6 &&
+        <Text style={{ color: "#f33", fontSize: 9 }}>A password deve conter pelo menos 6 caracteres</Text>}
       <TextInput label="Repetir Password*" autoCapitalize="none" secureTextEntry={true}
-        onChangeText={(text) => setPass2(text)} style={{ width: "80%", marginVertical: 10 }} value={pass2} />
+        onChangeText={(text) => setUserData({ ...userData, password2: text })} style={{ width: "80%", marginVertical: 10 }} value={userData.password2} />
+      {userData.password2.length > 0 && userData.password2 != userData.password1 &&
+        <Text style={{ color: "#f33", fontSize: 9 }}>As password inseridas devem ser idênticas</Text>}
       <TextInput label="Nome Completo*" autoCapitalize="none"
         onChangeText={(text) => setUserData({ ...userData, name: text })} style={{ width: "80%", marginVertical: 10 }} value={userData.name} />
       <View style={{ width: "80%", marginVertical: 10, flexDirection: "row", alignItems: "center" }}>
@@ -67,11 +72,15 @@ function SignInView({ navigation }) {
         style={{ width: "80%", marginVertical: 10 }} value={userData.phone_number} />
       <TouchableOpacity
         onPress={() => {
-          if (Object.values(userData).reduce((prev, current) => prev && (!current.length || current.length > 0)))
+          if (
+            Object.values(userData).reduce((prev, current) => prev && (!current.length || current.length > 0)) &&
+            userData.password1 == userData.password2
+          )
             navigation.navigate("SignInAnimalView")
         }}
         style={{
-          width: "80%", backgroundColor: `#17a2b8${Object.values(userData).reduce((prev, current) => prev && (!current.length || current.length > 0))
+          width: "80%", backgroundColor: `#17a2b8${Object.values(userData).reduce((prev, current) => prev && (!current.length || current.length > 0)) &&
+            userData.password1 == userData.password2
             ? "ff" : "44"}`, height: 65,
           borderRadius: 32, justifyContent: "center", alignItems: "center", marginVertical: 10
         }}>

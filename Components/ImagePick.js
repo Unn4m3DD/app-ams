@@ -2,7 +2,7 @@ import React from 'react';
 import { View, TouchableOpacity, Image } from 'react-native';
 import { AntDesign, Entypo } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
-
+import firebase from "../services/firebase.js"
 
 function ImagePick({ setExternalImage }) {
   const [image, setImage] = React.useState(null);
@@ -12,10 +12,11 @@ function ImagePick({ setExternalImage }) {
       allowsEditing: true,
       aspect: [1, 1],
       quality: 1,
+      base64: true
     });
 
     if (!result.cancelled) {
-      setExternalImage(result.uri)
+      setExternalImage(result.base64)
       setImage(result.uri);
     }
   };

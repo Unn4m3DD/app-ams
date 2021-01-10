@@ -14,6 +14,7 @@ import LoginScreen from './Screens/LoginScreen.js';
 import { UserDataContext } from "./Contexts/UserDataContext.js"
 import { LogBox } from 'react-native';
 import default_user_data from "./Contexts/DefaultUserData"
+import firebase from "./services/firebase"
 LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
 ]);
@@ -23,6 +24,8 @@ function App() {
   const [userData, setUserData] = React.useState(
     {
       email: "",
+      password1: "",
+      password2: "",
       name: "",
       address: "",
       post_code: "",
@@ -41,6 +44,8 @@ function App() {
       ]
     }
   )
+  
+
   React.useEffect(() => {
     if (loggedIn)
       setUserData(default_user_data)
