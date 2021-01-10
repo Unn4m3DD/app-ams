@@ -16,6 +16,8 @@ function AllFindView({ navigation }) {
         {findItems.map((item, index) => {
           return <AnimalItem
             key={index}
+            image={item.image}
+            firebase_key={item.firebase_key}
             color={item.color}
             location={item.location}
             date={item.date}
@@ -23,7 +25,6 @@ function AllFindView({ navigation }) {
             age={item.age}
             animal_weight={item.animal_weight}
             animal_color={item.animal_color}
-            img_uri={item.img_uri}
             description={item.description}
             navigation={navigation}
           />

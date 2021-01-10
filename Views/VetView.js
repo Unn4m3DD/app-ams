@@ -2,8 +2,6 @@
 import * as React from 'react';
 import { View, Text, Animated, TouchableOpacity, ScrollView } from 'react-native';
 import VetCard from '../Components/VetCard';
-import Filter from '../Components/Filter';
-import AnimalItem from '../Components/AnimalItem';
 import FoodItem from '../Components/FoodItem';
 function VetView({navigation}) {
   return (

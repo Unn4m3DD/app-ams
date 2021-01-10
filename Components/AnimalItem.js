@@ -1,13 +1,14 @@
 
 
 import React from 'react';
-import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity, Alert } from 'react-native';
 
 import { Entypo, Feather } from '@expo/vector-icons';
 const { width: g_width, height: g_height } = Dimensions.get("window");
+import firebase from "./../services/firebase.js"
 // import { Container } from './styles';
 
-const AnimalItem = ({ date, breed, age, animal_weight, animal_color, img_uri, description, location, color, navigation, }) => {
+const AnimalItem = ({ date, breed, age, animal_weight, animal_color, description, location, color, image, navigation, firebase_key }) => {
   return <View style={{ width: "100%", alignItems: "center", marginVertical: 20 }}>
     <TouchableOpacity activeOpacity={.95} style={{
       shadowColor: "#000",
@@ -23,11 +24,11 @@ const AnimalItem = ({ date, breed, age, animal_weight, animal_color, img_uri, de
       backgroundColor: "#fff",
       alignItems: "center"
     }}
-      onPress={() => navigation.navigate("PerFindView", { date, breed, age, animal_weight, animal_color, img_uri, description, navigation, color, location })}
+      onPress={() => navigation.navigate("PerFindView", { date, breed, age, animal_weight, animal_color, description, navigation, color, location, firebase_key })}
     >
       <Image
         style={{ height: 250, width: "98%", margin: 5 }}
-        source={{ uri: img_uri }}
+        source={{ uri: `data:image/jpeg;base64,${image}` }}
       />
       <View style={{ width: "100%", flexDirection: "row" }}>
         <View style={{ width: "70%", padding: 10 }}>

@@ -6,6 +6,7 @@ import { TextInput } from 'react-native-gesture-handler';
 import ImagePick from '../Components/ImagePick';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { FindItemsContext } from '../Contexts/FindItemsContext';
+import firebase from "./../services/firebase"
 const { width: g_width, height: g_height } = Dimensions.get("window");
 
 function PerFindView({ navigation }) {
@@ -30,7 +31,7 @@ function PerFindView({ navigation }) {
           flexDirection: "row",
           alignItems: "center"
         }}>
-          <ImagePick setExternalImage={(uri) => { setForm({ ...form, img_uri: uri }) }} />
+          <ImagePick setExternalImage={(image) => { setForm({ ...form, image: image }) }} />
           <View style={{
             width: 300, marginLeft: 10
           }}>
@@ -105,7 +106,7 @@ function PerFindView({ navigation }) {
       position: "absolute", bottom: 20, right: 0,
       height: 50,
       paddingHorizontal: 10,
-      backgroundColor: `#37c2d8${Object.values(form).reduce((prev, current) => prev && (current.length > 0), true) ? "ff" : "88"}`,
+      backgroundColor: `#37c2d8${Object.values(form).reduce((prev, current) => prev && (!current.length || current.length > 0), true) ? "ff" : "88"}`,
       flexDirection: "row",
       alignItems: "center",
       justifyContent: "space-between",
@@ -113,7 +114,9 @@ function PerFindView({ navigation }) {
       borderBottomLeftRadius: 25,
     }}
       onPress={() => {
-        if (!Object.values(form).reduce((prev, current) => prev && (current.length > 0), true)) return
+        if (!Object.values(form).reduce((prev, current) => prev && (!current.length || current.length > 0), true)) return
+        form.firebase_key = firebase.database().ref("findItems").push(form).key
+        firebase.storage().ref().child(form.firebase_key).putString(form.image)
         setFindItems([...findItems, form])
         navigation.navigate('AllFindView')
       }}

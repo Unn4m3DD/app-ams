@@ -1,15 +1,28 @@
 
 import * as React from 'react';
-import { View, Text, ScrollView, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, Image, StyleSheet, Dimensions, TouchableOpacity, Alert } from 'react-native';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
 import { FindItemsContext } from '../Contexts/FindItemsContext';
+import firebase from "./../services/firebase"
 const { width: g_width, height: g_height } = Dimensions.get("window");
 
 function PerFindView({ navigation, route }) {
   const { findItems, setFindItems } = React.useContext(FindItemsContext);
-
   const data = route.params
-  //{ animal_weight, animal_color, description, img_uri, navigation }
+  const [image, setImage] = React.useState("");
+  React.useEffect(() => {
+    firebase.storage().ref().child(data.firebase_key).getDownloadURL().then((link) => {
+      console.log(link)
+      fetch(link).then(response => response.blob())
+        .then(blob => {
+          let reader = new FileReader();
+          reader.onload = function () {
+            setImage(this.result);
+          }; 
+          reader.readAsDataURL(blob);
+        });
+    }).catch((error) => { Alert.alert("", error.message) })
+  }, [image])
   return <>
     <ScrollView contentContainerStyle={{ margin: 20 }}>
       <View style={{
@@ -24,7 +37,7 @@ function PerFindView({ navigation, route }) {
           alignItems: "center",
           justifyContent: "center",
         }}>
-          <Image source={{ uri: data.img_uri }} style={{ height: 130, width: 130, borderRadius: 75 }} />
+          <Image source={{ uri: "data:image/jpeg;base64," + image }} style={{ height: 130, width: 130, borderRadius: 75 }} />
         </View>
         <Text numberOfLines={2} style={{ fontSize: 18, fontWeight: "bold", marginRight: 180, marginLeft: 10 }}>{data.description}</Text>
       </View>
@@ -63,6 +76,7 @@ function PerFindView({ navigation, route }) {
       borderBottomLeftRadius: 25,
     }}
       onPress={() => {
+        firebase.database().ref("findItems/" + data.firebase_key).remove()
         setFindItems(
           [...(findItems.filter((item) => item.description != data.description))]
         )
