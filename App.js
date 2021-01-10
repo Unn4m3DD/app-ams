@@ -13,10 +13,10 @@ import { StatusBar } from 'expo-status-bar';
 import LoginScreen from './Screens/LoginScreen.js';
 import { UserDataContext } from "./Contexts/UserDataContext.js"
 import { LogBox } from 'react-native';
-import default_user_data from "./Contexts/DefaultUserData"
-import firebase from "./services/firebase"
+import { ActivityIndicator } from 'react-native-paper';
 LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
+  'Setting a timer'
 ]);
 const Tab = createMaterialTopTabNavigator();
 function App() {
@@ -28,7 +28,7 @@ function App() {
       password2: "",
       name: "",
       address: "",
-      post_code: "",
+      post_code: "-",
       phone_number: "",
       animal: {
         image: "",
@@ -44,12 +44,8 @@ function App() {
       ]
     }
   )
-  
 
-  React.useEffect(() => {
-    if (loggedIn)
-      setUserData(default_user_data)
-  }, [])
+
   return (<>
     <StatusBar
       style={"auto"}
