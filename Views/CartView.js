@@ -3,8 +3,8 @@ import * as React from 'react';
 import { View, Text, Image, StyleSheet, Dimensions, CheckBox } from 'react-native';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
 import { UserDataContext } from '../Contexts/UserDataContext';
+import firebase from "./../services/firebase.js"
 const { width: g_width, height: g_height } = Dimensions.get("window");
 function InvoiceView({ navigation }) {
   const { userData, setUserData } = React.useContext(UserDataContext)
@@ -93,6 +93,12 @@ function InvoiceView({ navigation }) {
         onPress={() => {
           if (userData.cart.length == 0) return
           const date = new Date();
+          firebase.database().ref("users/" + userData.uid + "/orders").push(
+            {
+              type: "food",
+              date: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
+              items: [...userData.cart]
+            })
           setUserData({
             ...userData, cart: [], orders: [
               {

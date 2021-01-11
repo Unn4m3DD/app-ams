@@ -5,7 +5,7 @@ import { set } from 'react-native-reanimated';
 import { UserDataContext } from '../Contexts/UserDataContext';
 import firebase from "../services/firebase.js"
 function LoginView({ navigation, route }) {
-  const { setUserData } = React.useContext(UserDataContext)
+  const { userData, setUserData } = React.useContext(UserDataContext)
   const [email, setEmail] = React.useState("test1@gmail.com")
   const [password, setPassword] = React.useState("testtest")
   const [signingIn, setSigningIn] = React.useState(false)
@@ -27,17 +27,15 @@ function LoginView({ navigation, route }) {
             setSigningIn(true)
             firebase.auth().signInWithEmailAndPassword(email, password).then((user) => {
               firebase.database().ref('users/' + user.user.uid).once("value").then((snapshot) => {
-                setUserData({ ...snapshot.val(), cart: [], orders: [] })
-              }).then(() => {
-                firebase.storage().ref().child(user.user.uid).getDownloadURL().then((link) => {
-                  fetch(link).then(response => response.blob())
-                    .then(blob => {
-                      let reader = new FileReader();
-                      reader.onload = function () { setUserData({ ...userData, animal: { ...userData.animal, image: this.result } }) }; // <--- `this.result` contains a base64 data URI
-                      reader.readAsDataURL(blob);
-                    });
-                  route.params.setLoggedIn(true)
-                }).catch((error) => { setSigningIn(false); Alert.alert("", error.message) })
+                const tmp_user_data = snapshot.val()
+                console.log(tmp_user_data.orders)
+                if (tmp_user_data.orders == undefined)
+                  tmp_user_data.orders = []
+                else {
+                  tmp_user_data.orders = Object.values(tmp_user_data.orders)
+                }
+                setUserData({ ...tmp_user_data, cart: [], uid: user.user.uid })
+                route.params.setLoggedIn(true)
               }).catch((error) => { setSigningIn(false); Alert.alert("", error.message) })
             }).catch((error) => { setSigningIn(false); Alert.alert("", error.message) })
           }}

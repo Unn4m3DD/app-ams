@@ -1,7 +1,6 @@
 import { Entypo, AntDesign, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons';
 import * as React from 'react';
 import { View, Text, Animated, TouchableOpacity, ScrollView, Picker } from 'react-native';
-import { PickerItem } from 'react-native/Libraries/Components/Picker/Picker';
 export default function Filter() {
   const filter_screen_height = React.useRef(new Animated.Value(0)).current;
   const [filtersState, setFiltersState] = React.useState(false)

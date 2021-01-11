@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Platform } from 'react-native';
 import Constants from 'expo-constants'
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
@@ -13,17 +13,18 @@ import { StatusBar } from 'expo-status-bar';
 import LoginScreen from './Screens/LoginScreen.js';
 import { UserDataContext } from "./Contexts/UserDataContext.js"
 import { LogBox } from 'react-native';
-import { ActivityIndicator } from 'react-native-paper';
-LogBox.ignoreLogs([
-  'Non-serializable values were found in the navigation state',
-  'Setting a timer'
-]);
+if(Platform.OS != "web")
+  LogBox.ignoreLogs([
+    'Non-serializable values were found in the navigation state',
+    'Setting a timer'
+  ]);
 const Tab = createMaterialTopTabNavigator();
 function App() {
   const [loggedIn, setLoggedIn] = React.useState(false)
   const [userData, setUserData] = React.useState(
     {
       email: "",
+      uid: " ",
       password1: "",
       password2: "",
       name: "",
@@ -44,7 +45,6 @@ function App() {
       ]
     }
   )
-
 
   return (<>
     <StatusBar

@@ -71,24 +71,20 @@ function SignInAnimalView({ route }) {
                 const user_data_copy = JSON.parse(JSON.stringify(userData))
                 user_data_copy.cart = ""
                 delete user_data_copy.cart
-                user_data_copy.animal.image = ""
-                delete user_data_copy.animal.image
+                user_data_copy.uid = ""
+                delete user_data_copy.uid
                 user_data_copy.password1 = ""
                 delete user_data_copy.password1
                 user_data_copy.password2 = ""
                 delete user_data_copy.password2
+                setUserData({ ...userData, uid: user.user.uid })
                 firebase
                   .database()
                   .ref('users/' + user.user.uid)
                   .set(
                     user_data_copy
                   ).then(() => {
-                    firebase.storage().ref().child(user.user.uid).putString(userData.animal.image).then(() => {
-                      route.params.setLoggedIn(true)
-                    }).catch((error) => {
-                      setSigningIn(false)
-                      Alert.alert("", error.message)
-                    });
+                    route.params.setLoggedIn(true)
                   }).catch((error) => {
                     setSigningIn(false)
                     Alert.alert("", error.message)

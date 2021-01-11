@@ -126,7 +126,7 @@ function PerFoodView({ navigation, route }) {
       borderBottomLeftRadius: 25,
     }}
       onPress={() => {
-        if (!route.params.sold_out) return
+        if (route.params.sold_out) return
         const tmp_user_data_cart = JSON.parse(JSON.stringify(userData.cart))
         for (let i = 0; i < tmp_user_data_cart.length; i++) {
           if (tmp_user_data_cart[i].name == data.name) {

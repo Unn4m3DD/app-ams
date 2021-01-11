@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Image, TouchableOpacity, Text } from 'react-native';
-import { TextInput } from 'react-native-paper';
 import { createStackNavigator } from '@react-navigation/stack';
 import LoginView from '../Views/LoginView';
 import SignInView from '../Views/SignInView';
