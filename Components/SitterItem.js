@@ -26,7 +26,7 @@ const SitterItem = ({ name, recommended, price, stars_initial, stared_initial, d
       backgroundColor: "#fff",
       alignItems: "center",
     }}
-      onPress={() => navigation.navigate("PerPetSitterView")}
+      onPress={() => navigation.navigate("PerPetSitterView", { name, recommended, price, stars_initial, stared_initial, description, img_uri, navigation })}
     >
       <View style={{ flexDirection: "row", justifyContent: "space-between", marginTop: 30 }}>
         <Image

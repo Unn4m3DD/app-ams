@@ -23,7 +23,8 @@ function EmergencyView() {
             Será atendido dentro de momentos
           </Text>
           <Text style={{ fontSize: 13, paddingRight: 100, paddingLeft: 30, fontWeight: "900" }}>
-            Por favor faça uma breve descrição do ocorrido para que possamos iniciar o processo de triagem
+            Por favor faça uma breve descrição do ocorrido para que possamos iniciar o processo de triagem,
+            {`\nEncontram-se ${Math.round(Math.random() * 10 + 1)} em espera`}
           </Text>
         </LinearGradient>
         <TextInput numberOfLines={8} textAlignVertical="top"

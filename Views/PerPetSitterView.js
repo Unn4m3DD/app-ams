@@ -4,19 +4,10 @@ import { View, Text, ScrollView, Image, StyleSheet, Dimensions, TouchableOpacity
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
 const { width: g_width, height: g_height } = Dimensions.get("window");
 import DateTimePicker from '@react-native-community/datetimepicker';
-function PerPetSitterView({ navigation }) {
+function PerPetSitterView({ navigation, route }) {
   const [currentStars, setCurrentStars] = React.useState(0);
   const [dateModal, setDateModal] = React.useState(false);
-  const data = {
-    stared: true,
-    price: 5.52,
-    img_uri: "http://148.63.171.198:90/img/team/01.jpg",
-    name: "André Patacas",
-    description: "Cuidador especialista em robôs assassinos",
-    stars_initial: 212,
-    stared_initial: true,
-    recommended: true
-  }
+  const data = route.params
   return <>
     <TouchableOpacity activeOpacity={.90} style={{
       position: "absolute", top: 10, left: 0,
