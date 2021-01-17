@@ -30,7 +30,7 @@ function SignInView({ navigation }) {
         <Text style={{ color: "#f33", fontSize: 9 }}>As password inseridas devem ser idênticas</Text>}
       <TextInput label="Nome Completo*" autoCapitalize="none"
         onChangeText={(text) => setUserData({ ...userData, name: text })} style={{ width: "80%", marginVertical: 10 }} value={userData.name} />
-      {userData.name.length > 0 && userData.name.split(" ").length != 2 &&
+      {userData.name.length > 0 && userData.name.split(" ").length < 2 &&
         <Text style={{ color: "#f33", fontSize: 9 }}>Insira um nome completo válido</Text>}
       <View style={{ width: "80%", marginVertical: 10, flexDirection: "row", alignItems: "center" }}>
         <TextInput
