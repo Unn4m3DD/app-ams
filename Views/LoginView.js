@@ -6,8 +6,8 @@ import { UserDataContext } from '../Contexts/UserDataContext';
 import firebase from "../services/firebase.js"
 function LoginView({ navigation, route }) {
   const { userData, setUserData } = React.useContext(UserDataContext)
-  const [email, setEmail] = React.useState("test1@gmail.com")
-  const [password, setPassword] = React.useState("testtest")
+  const [email, setEmail] = React.useState("artur@gmail.com")
+  const [password, setPassword] = React.useState("corona")
   const [signingIn, setSigningIn] = React.useState(false)
   return <>
     {signingIn &&
@@ -28,7 +28,6 @@ function LoginView({ navigation, route }) {
             firebase.auth().signInWithEmailAndPassword(email, password).then((user) => {
               firebase.database().ref('users/' + user.user.uid).once("value").then((snapshot) => {
                 const tmp_user_data = snapshot.val()
-                console.log(tmp_user_data.orders)
                 if (tmp_user_data.orders == undefined)
                   tmp_user_data.orders = []
                 else {

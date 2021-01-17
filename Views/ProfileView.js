@@ -11,8 +11,8 @@ function ProfileView({ navigation }) {
   const { userData, setUserData } = React.useContext(UserDataContext);
   const avatar_size = React.useRef(new Animated.Value(250)).current;
   const user_orders = userData.orders.sort((a, b) => {
-    const aa = a.date.split("/");
-    const bb = b.date.split("/");
+    const aa = a.date.split("/").map(e => Number(e));
+    const bb = b.date.split("/").map(e => Number(e));
     for (let i = 2; i >= 0; i--) {
       if (aa[i] > bb[i]) return -1;
       if (bb[i] > aa[i]) return 1;

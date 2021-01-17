@@ -8,7 +8,7 @@ import firebase from "./../services/firebase.js"
 const { width: g_width, height: g_height } = Dimensions.get("window");
 function InvoiceView({ navigation }) {
   const { userData, setUserData } = React.useContext(UserDataContext)
-  const [isSelected, setSelection] = useState(false);
+  const [isSelected, setSelection] = React.useState(false);
   return <ScrollView>
     <View>
       <LinearGradient
@@ -65,7 +65,6 @@ function InvoiceView({ navigation }) {
       <CheckBox
           value={isSelected}
           onValueChange={setSelection}
-          style={styles.checkbox}
         />
     </View>
     <View style={{ margin: 20, flexDirection: "row", justifyContent: "space-around" }}>
