@@ -5,6 +5,7 @@ import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Entypo, FontAwesome5, Octicons, AntDesign } from '@expo/vector-icons';
 import { UserDataContext } from '../Contexts/UserDataContext';
+import { Restart } from 'fiction-expo-restart';
 
 const { width: g_width, height: g_height } = Dimensions.get("window");
 function ProfileView({ navigation }) {
@@ -19,7 +20,7 @@ function ProfileView({ navigation }) {
     }
     return 0;
   })
-  return <ScrollView
+  return <><ScrollView
     contentContainerStyle={{ alignItems: "center" }}
     onScroll={(event) => {
       if (event.nativeEvent.contentOffset.y < 100)
@@ -33,7 +34,20 @@ function ProfileView({ navigation }) {
         start={{ x: 0.7, y: 0 }}
         style={{ width: "100%", alignItems: "center" }}
       >
-        <View style={{ height: 30 }} />
+        <View style={{ height: 30, alignItems: "flex-end", justifyContent: "flex-end", width: "100%" }}>
+          <TouchableOpacity activeOpacity={.90} style={{
+            height: 25, width: 80,
+            paddingHorizontal: 10,
+            backgroundColor: "#bf1919",
+            borderRadius: 12,
+            zIndex: 10,
+            marginHorizontal: 10,
+            alignItems: "center",
+            justifyContent: "center"
+          }}
+            onPress={() => Restart()}
+          ><Text style={{ color: "#fff", fontWeight: "bold", textAlign: "center" }}>Logout</Text></TouchableOpacity>
+        </View>
         <Animated.View style={[
           styles.avatar_shadow,
           {
@@ -94,6 +108,7 @@ function ProfileView({ navigation }) {
     })}
 
   </ScrollView>
+  </>
 }
 const styles = StyleSheet.create({
   info_button: {

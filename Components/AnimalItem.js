@@ -24,7 +24,7 @@ const AnimalItem = ({ date, breed, age, animal_weight, animal_color, description
       backgroundColor: "#fff",
       alignItems: "center"
     }}
-      onPress={() => navigation.navigate("PerFindView", { date, breed, age, animal_weight, animal_color, description, navigation, color, location, firebase_key })}
+      onPress={() => navigation.navigate("PerFindView", { date, breed, age, animal_weight, animal_color, description, navigation, color, location, firebase_key, image })}
     >
       <Image
         style={{ height: 250, width: "98%", margin: 5 }}

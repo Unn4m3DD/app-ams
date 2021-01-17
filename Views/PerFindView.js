@@ -23,7 +23,7 @@ function PerFindView({ navigation, route }) {
           alignItems: "center",
           justifyContent: "center",
         }}>
-          <Image source={{ uri: "data:image/jpeg;base64," + data.image }} style={{ height: 130, width: 130, borderRadius: 75 }} />
+          <Image source={{ uri: `data:image/jpeg;base64,${data.image}` }} style={{ height: 130, width: 130, borderRadius: 75 }} />
         </View>
         <Text numberOfLines={2} style={{ fontSize: 18, fontWeight: "bold", marginRight: 180, marginLeft: 10 }}>{data.description}</Text>
       </View>

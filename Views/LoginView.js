@@ -6,8 +6,8 @@ import { UserDataContext } from '../Contexts/UserDataContext';
 import firebase from "../services/firebase.js"
 function LoginView({ navigation, route }) {
   const { userData, setUserData } = React.useContext(UserDataContext)
-  const [email, setEmail] = React.useState("artur@gmail.com")
-  const [password, setPassword] = React.useState("corona")
+  const [email, setEmail] = React.useState("")
+  const [password, setPassword] = React.useState("")
   const [signingIn, setSigningIn] = React.useState(false)
   return <>
     {signingIn &&
