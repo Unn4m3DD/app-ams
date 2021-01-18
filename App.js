@@ -54,7 +54,7 @@ function App() {
       <View style={{ height: Constants.statusBarHeight, backgroundColor: "#0000" }} />
       {!loggedIn && <NavigationContainer><LoginScreen setLoggedIn={setLoggedIn} /></NavigationContainer>}
       {loggedIn && <NavigationContainer>
-        <Tab.Navigator initialRouteName="Comida" tabBarPosition="bottom"
+        <Tab.Navigator initialRouteName="Perfil" tabBarPosition="bottom"
           tabBarOptions={{
             showIcon: true,
             labelStyle: {
