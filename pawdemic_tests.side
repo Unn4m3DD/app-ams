@@ -1,0 +1,1252 @@
+{
+  "id": "8cca92dd-aedc-45cf-bb4b-fc93c2ca3389",
+  "version": "2.0",
+  "name": "pawdemic_tests",
+  "url": "http://localhost:19006",
+  "tests": [{
+    "id": "9daee224-b60d-4dba-8743-33028a80206b",
+    "name": "encomendar_racao",
+    "commands": [{
+      "id": "28a6990a-a423-4ce4-8395-3b903526ec21",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c45baf5-9d00-4ee9-b6e4-ee58222271ab",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1021",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a71305a-3a79-4b63-b473-f0f7a580d22a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82fae44b-2bf1-4c9e-920f-cf4ee8ac01b6",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='artur@gmail.com']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "artur@gmail.com"
+    }, {
+      "id": "4b25b963-2f27-4dac-bd2b-ffca5be5235a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69c106fb-3b2f-4404-9341-a202f9c6644c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='corona']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "corona"
+    }, {
+      "id": "f131c7d9-6f8f-4c1e-9317-de154e4c1f22",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-text-901oao",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4) > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7892ad13-d743-4465-a813-5e4feae6aae6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-text-901oao:nth-child(4)",
+      "targets": [
+        ["css=.css-text-901oao:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:position"]
+      ],
+      "value": "Artur Guimarães"
+    }, {
+      "id": "1ab024a5-f9a9-412f-8a87-00e29f6bb7e6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)",
+      "targets": [
+        ["css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": "Fiona"
+    }, {
+      "id": "7e9af34c-935d-4387-a113-e958dd7312fe",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "ProfileView",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afdc8af6-3967-4ae0-985c-3529c636cbf4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(3)",
+      "targets": [
+        ["css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div[2]/div[2]/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a85f352-252f-4088-aec8-5ee25df008a2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) > .r-flexDirection-18u37iz > .css-view-1dbjc4n:nth-child(2) > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) > .r-flexDirection-18u37iz > .css-view-1dbjc4n:nth-child(2) > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[3]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[3]/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[3]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Ração de Frango para Cão Adulto Grande"
+    }, {
+      "id": "e3ee1b28-86cf-4e08-88ed-2cb63b762d8e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) > .r-flexDirection-18u37iz > .css-view-1dbjc4n:nth-child(2)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) > .r-flexDirection-18u37iz > .css-view-1dbjc4n:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[3]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[3]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c25f33a-0f38-4f05-be4e-e8e50e5910c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-cursor-1loqt21 > .r-fontSize-1i10wst",
+      "targets": [
+        ["css=.r-cursor-1loqt21 > .r-fontSize-1i10wst", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[3]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d834e43-ff25-4cc4-af26-07607a2105bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-bottom-1p0dtai > .css-text-901oao:nth-child(3)",
+      "targets": [
+        ["css=.r-bottom-1p0dtai > .css-text-901oao:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[3]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[2]/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div[2]/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e67bffd7-f154-43f1-b090-56105e136b18",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(6) > .r-flex-13awgt0",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(6) > .r-flex-13awgt0", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[3]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div[6]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]", "xpath:position"]
+      ],
+      "value": "8.91€"
+    }, {
+      "id": "0504d72a-a347-4430-bf91-589fd5723b45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-cursor-1ei5mc7",
+      "targets": [
+        ["css=.r-cursor-1ei5mc7", "css:finder"],
+        ["xpath=//input[@type='checkbox']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[3]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div[7]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79974986-8eab-48ab-9607-f2b130ba4350",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(8) > .css-cursor-18t94o4:nth-child(2) .css-text-901oao",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(8) > .css-cursor-18t94o4:nth-child(2) .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[3]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div[8]/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[8]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e15f898f-02f5-4d44-ad6e-2f0e22596cc1",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "062123b8-55b3-47e4-b123-4ed05732a081",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-cursor-1loqt21:nth-child(5)",
+      "targets": [
+        ["css=.r-cursor-1loqt21:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div[2]/div[2]/div/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71204b37-5ce0-4c45-b8e6-0b3518a0e841",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-cursor-18t94o4:nth-child(3) > .css-view-1dbjc4n",
+      "targets": [
+        ["css=.css-cursor-18t94o4:nth-child(3) > .css-view-1dbjc4n", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[3]/div", "xpath:position"]
+      ],
+      "value": "Data: 18/1/2021\\n\\nTotal: 8.91€"
+    }, {
+      "id": "560a3833-4b67-451c-8e05-69eeb4c575c3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-cursor-18t94o4 .r-textAlign-q4m81j:nth-child(1)",
+      "targets": [
+        ["css=.css-cursor-18t94o4 .r-textAlign-q4m81j:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7aff85d3-5b63-42fd-abde-b684b6d8dfed",
+    "name": "consulta_urgencia",
+    "commands": [{
+      "id": "e671faff-007b-47cb-b998-0e3fc10d621e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a8ffcc0-73cd-41a7-808f-960628621ac6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1021",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3589a992-4c90-4152-b122-acd389c094d0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7f76e73-36fc-4ba7-b3d2-022a558bb7db",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='mariana@gmail.com']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "mariana@gmail.com"
+    }, {
+      "id": "bb819a22-5544-422b-86e0-efeea8d9320a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96681144-c77d-4c77-a223-3c7cf9314c42",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='corona']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "corona"
+    }, {
+      "id": "51da9cb4-aa05-4e84-ae6a-1e336c18d955",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-text-901oao",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4) > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "452d774a-7e78-4afc-be0b-86bdeb6f9bc8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-text-901oao:nth-child(4)",
+      "targets": [
+        ["css=.css-text-901oao:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:position"]
+      ],
+      "value": "Mariana Alves"
+    }, {
+      "id": "9851354b-d78a-4c5f-9452-abc931f05a70",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)",
+      "targets": [
+        ["css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": "Oliver"
+    }, {
+      "id": "7e016884-fcda-4374-bfae-2fe9f0dffd53",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "ProfileView",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92666bc5-a514-476a-8583-b51092ca19d0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(1)",
+      "targets": [
+        ["css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div[2]/div[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e28ea821-90d2-4ff6-8856-53a0e66f56a2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-alignItems-1awozwy > .r-justifyContent-1777fci:nth-child(2) > .css-text-901oao",
+      "targets": [
+        ["css=.r-alignItems-1awozwy > .r-justifyContent-1777fci:nth-child(2) > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div/div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Consulta de Urgência"
+    }, {
+      "id": "45cf8f79-c0f1-42e6-844f-50606a1f8ca1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-alignItems-1awozwy > .r-justifyContent-1777fci:nth-child(2) > .css-text-901oao",
+      "targets": [
+        ["css=.r-alignItems-1awozwy > .r-justifyContent-1777fci:nth-child(2) > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div/div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "136b2958-c4d0-4d5c-9bc0-d28c0bdbc31d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-flexDirection-18u37iz > .r-flexDirection-18u37iz:nth-child(1) > .r-color-jwli3a:nth-child(1)",
+      "targets": [
+        ["css=.r-flexDirection-18u37iz > .r-flexDirection-18u37iz:nth-child(1) > .r-color-jwli3a:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div/div/div/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "Audio"
+    }, {
+      "id": "6a5e4b35-4ad4-4bf9-915b-7b2f2870ec6a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-flexDirection-18u37iz > .r-flexDirection-18u37iz:nth-child(2) > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.r-flexDirection-18u37iz > .r-flexDirection-18u37iz:nth-child(2) > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div/div/div/div/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "Enviar"
+    }, {
+      "id": "a2de5488-0a62-4082-81d4-564f9bee79f4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .r-justifyContent-1777fci > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4) > .r-justifyContent-1777fci > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": "Entrar na lista de espera"
+    }, {
+      "id": "950db47a-6244-4646-948a-9ee5ef636a72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "45bdb34e-535b-4a0b-8ef7-50a9207f5427",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Comeu chocolate"
+    }, {
+      "id": "bfe65c83-df04-47ec-8dfc-9d782c844ecb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-flexDirection-18u37iz > .r-flexDirection-18u37iz:nth-child(2) > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.r-flexDirection-18u37iz > .r-flexDirection-18u37iz:nth-child(2) > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div/div/div/div/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8dbbaeb-1764-421a-b7a5-d2224a32ca5f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .r-justifyContent-1777fci > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4) > .r-justifyContent-1777fci > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1b22d1b1-0c0f-4c96-b94f-62224240c06f",
+    "name": "contratar_petsitter",
+    "commands": [{
+      "id": "becef3a9-4dba-4798-9618-b26f1ac9d0d9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74cefb8a-f524-48ef-8794-10796a593479",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1021",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03bcd91b-2509-4682-9935-1244525e216a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8611fb2-27b1-41c9-93e5-2d5c70ee7492",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='teresa@gmail.com']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "teresa@gmail.com"
+    }, {
+      "id": "d37af1e0-9fc7-4d10-8e13-06d59f9d8b61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "874a2c5a-68b4-416d-9ffe-2443c140ba72",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='corona']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "corona"
+    }, {
+      "id": "3f076111-614c-45ed-8008-721cc62997b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-text-901oao",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4) > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7953a66a-036b-4e86-80fd-6b2073d9be15",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-text-901oao:nth-child(4)",
+      "targets": [
+        ["css=.css-text-901oao:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:position"]
+      ],
+      "value": "Teresa Valadares"
+    }, {
+      "id": "fea7915b-8f9e-4fe4-8f35-d2e725a389c3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)",
+      "targets": [
+        ["css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": "Darcy"
+    }, {
+      "id": "e917d026-9b93-4d16-92aa-5404e34e9921",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "ProfileView",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9fd0f5bb-43f5-477f-af62-5727e688b3cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(2)",
+      "targets": [
+        ["css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div[2]/div[2]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61d2bdae-b87a-4604-94e5-e2a2d2001cb1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[2]/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "André Patacas"
+    }, {
+      "id": "5050fb76-f4ef-4351-8f3f-baebdf864bfd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[3]/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Denis Yamunaque"
+    }, {
+      "id": "e474b4c1-75bc-45d4-8a9d-e22e688766db",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[4]/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Luísa Amaral"
+    }, {
+      "id": "532b96cb-4882-44b8-9cd8-c2613a1cf6d1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(5) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(5) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[5]/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": "Pedro Loureiro"
+    }, {
+      "id": "f03f930d-a672-4b59-94a9-44189bad0a54",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(2)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-text-901oao:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[4]/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Cuidador especialista em cavaliers "
+    }, {
+      "id": "27ef28e4-aced-445c-bdee-65b058244162",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n:nth-child(2)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[4]/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[4]/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6891fd6e-fb3a-47a8-b437-8391e77a686d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(8) > .css-text-901oao",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(8) > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div/div[8]/div", "xpath:idRelative"],
+        ["xpath=//div[8]/div", "xpath:position"]
+      ],
+      "value": "Selecione uma data e hora"
+    }, {
+      "id": "9b77e3bf-9245-45b3-bbea-dfc214c7be5c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(8) > .css-text-901oao",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(8) > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div/div[8]/div", "xpath:idRelative"],
+        ["xpath=//div[8]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "07ff8cee-94a5-4e85-9b59-53fdebdadf38",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-cursor-1loqt21 > .r-fontSize-1i10wst",
+      "targets": [
+        ["css=.r-cursor-1loqt21 > .r-fontSize-1i10wst", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "Reservar Pet Sitter"
+    }, {
+      "id": "5e05b250-d12c-4375-a9d4-0c9a9dd0970d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-cursor-1loqt21 > .r-fontSize-1i10wst",
+      "targets": [
+        ["css=.r-cursor-1loqt21 > .r-fontSize-1i10wst", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e35e51c3-e778-44b4-9eca-6cb0193fbfab",
+    "name": "publicar_anuncio",
+    "commands": [{
+      "id": "d430ed5b-9222-41b4-ab85-41d996fc042b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdc231da-c04a-4a16-b0e2-332185384b1a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1021",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c38ec171-94ac-4bd5-816b-45865c840cbd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25f16570-3628-4f26-95fa-a6b47751c301",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='marta@gmail.com']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "marta@gmail.com"
+    }, {
+      "id": "4b9a67e5-3efb-484d-8ed3-86f668c8610a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a82cac12-3942-4980-b250-84c1f7202519",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='corona']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "corona"
+    }, {
+      "id": "681c0a21-e20b-40f6-bc45-1147bc540437",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(4)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4ef5d72-a97f-4efa-9646-9df050f24990",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-text-901oao:nth-child(4)",
+      "targets": [
+        ["css=.css-text-901oao:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:position"]
+      ],
+      "value": "Marta Lopes"
+    }, {
+      "id": "50c25c17-5599-4cbf-a3b3-9ab95064e418",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)",
+      "targets": [
+        ["css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": "Rex"
+    }, {
+      "id": "cfaf8d52-167e-41c5-833d-98aa209bb20c",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "ProfileView",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ddff427d-9a9d-423d-9585-1eb2d7ac9710",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)",
+      "targets": [
+        ["css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div[2]/div[2]/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a893bbe2-7471-4ab9-8ad5-1336ce818012",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-flex-13awgt0 > .r-justifyContent-1777fci > .css-text-901oao",
+      "targets": [
+        ["css=.r-flex-13awgt0 > .r-justifyContent-1777fci > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a8bf304-c624-4ca1-b08c-f99b7d887bd2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-flex-13awgt0 > .r-justifyContent-1777fci > .css-text-901oao",
+      "targets": [
+        ["css=.r-flex-13awgt0 > .r-justifyContent-1777fci > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be9eb955-28db-4f81-bc9e-fb9cacaa9326",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-textinput-11aywtz:nth-child(1)",
+      "targets": [
+        ["css=.css-textinput-11aywtz:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1672dcac-a353-4423-8e1f-c9ad477ac61f",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-textinput-11aywtz:nth-child(1)",
+      "targets": [
+        ["css=.css-textinput-11aywtz:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Gato perdido em Aveiro"
+    }, {
+      "id": "23414239-7dc8-4e1b-bdd6-d2a6be658035",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7928244-41ab-4740-858f-5a748ef07c2d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='18/01/2021']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "18/01/2021"
+    }, {
+      "id": "34c83005-97dc-4a81-ab39-a47408e6cdc8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "faa3ccf8-7642-439f-b11e-b2123cdf9d9d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='7']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "7"
+    }, {
+      "id": "5d745e87-fdeb-4d63-bca9-801766c2edd6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(5) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(5) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "99ece664-5cb2-45d1-b6ff-80999418721e",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(5) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(5) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='Aveiro']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[5]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "Aveiro"
+    }, {
+      "id": "be516cbd-1a2c-45ee-9f00-ab2b04a866ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(6) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(6) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "513ca01c-392f-49af-981f-a758b241f60d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(6) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(6) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='Gato de pelo curto']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "Gato de pelo curto"
+    }, {
+      "id": "596d923b-6fb5-444b-bc30-99d594bda4f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(7) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(7) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e84d46d-cc7e-4778-944b-077f090758e0",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(7) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(7) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='3']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "39e3d047-9d3b-46bf-bc85-6b2232548a72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(8) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(8) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "449c0c7c-a32a-4eaf-a421-8126f1385c63",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(8) > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(8) > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='Preto e branco']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Preto e branco"
+    }, {
+      "id": "6e92036f-6ec7-4ace-a39b-5cd09da1fcfe",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-cursor-1loqt21 > .r-fontSize-1i10wst",
+      "targets": [
+        ["css=.r-cursor-1loqt21 > .r-fontSize-1i10wst", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Anunciar"
+    }, {
+      "id": "f691e2fa-1d95-4f28-8b53-5a0a996d2c13",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-cursor-1loqt21 > .r-fontSize-1i10wst",
+      "targets": [
+        ["css=.r-cursor-1loqt21 > .r-fontSize-1i10wst", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "228a7978-1124-42f8-864e-bcaaf2ed7eac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)",
+      "targets": [
+        ["css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div[2]/div[2]/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10a84dcb-e9fe-47ba-8b5c-3f13a8f3f68f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ef7c634f-0178-4306-b8ee-50942111d3cd",
+    "name": "procurar_anuncio",
+    "commands": [{
+      "id": "34998686-a5d1-4d43-a5fe-d5a2a71f4d74",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc4d3069-2814-44c8-bbc9-fd3a8f91181b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "960x1021",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b134f77-3fef-48f7-9cba-7e90b09f0359",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "517f89ae-3798-48cb-a164-9dd39ae17253",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='joao@gmail.com']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "joao@gmail.com"
+    }, {
+      "id": "3039dc9c-c588-48b7-9380-feb02056f5f3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9eff075a-2f39-45af-bb33-883798bf5ffe",
+      "comment": "",
+      "command": "type",
+      "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz", "css:finder"],
+        ["xpath=//input[@value='corona']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "corona"
+    }, {
+      "id": "d9533556-2a70-4107-a51a-aef710c42b2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(4)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "315b6026-3a82-449f-90fe-3ef2a15f13c0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-text-901oao:nth-child(4)",
+      "targets": [
+        ["css=.css-text-901oao:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[4]", "xpath:position"]
+      ],
+      "value": "João Teixeira"
+    }, {
+      "id": "34fa3128-5462-42ab-a20e-ccfd5d31e478",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)",
+      "targets": [
+        ["css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div/div/div[3]", "xpath:position"]
+      ],
+      "value": "Bigodes"
+    }, {
+      "id": "08584109-afff-4f88-9e49-8338b8ecd882",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "ProfileView",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d386911f-afcc-4b54-81ca-e7bd7049f268",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)",
+      "targets": [
+        ["css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div[2]/div[2]/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61d183f2-b48d-4f18-a84b-e988fb338bb6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[4]/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[4]/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "Gato preto encontrado no parque de Aveiro"
+    }, {
+      "id": "fb4a3dd5-b6d4-47a4-a1e8-d847ba998031",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "19b629fb-804b-46b0-826d-03e30332bd37",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(5) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(5) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[5]/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "Cão encontrado em Viseu"
+    }, {
+      "id": "51ae63f1-9861-4f01-8f97-3d23acf28e07",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd7cc01a-68f6-459c-947b-b8be341636dd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(6) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(6) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[6]/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "Gatinho perdido"
+    }, {
+      "id": "9d28e892-48ce-44e2-9b30-49df50a67d06",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7effef8f-a0e2-436e-839b-23df7d7944d1",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77a412c8-ed74-4e9c-a83b-c6ddaf524938",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-view-1dbjc4n:nth-child(7) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(7) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[7]/div/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "Cão perdido encontrado no bosque"
+    }, {
+      "id": "fda3b432-712a-45e9-9adf-6f1b8de673ac",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9619b371-496e-4616-acfd-e1acb66ce2a9",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4218912-4b79-43a4-a9bb-921a30826c05",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "d4effce3-3cf3-40ea-83fd-bfbeeb171a35",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost:19006/"],
+  "plugins": []
+}
