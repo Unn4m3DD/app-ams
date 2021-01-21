@@ -684,24 +684,24 @@
       "value": ""
     }]
   }, {
-    "id": "e35e51c3-e778-44b4-9eca-6cb0193fbfab",
-    "name": "publicar_anuncio",
+    "id": "827e4323-d6e8-48cd-bcdb-99540d260b74",
+    "name": "1_1publicar_anuncio",
     "commands": [{
-      "id": "d430ed5b-9222-41b4-ab85-41d996fc042b",
+      "id": "e82bf567-5df5-4c69-b292-a556041885a5",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "bdc231da-c04a-4a16-b0e2-332185384b1a",
+      "id": "76eceee7-6e37-4661-a924-e7b95b2a9209",
       "comment": "",
       "command": "setWindowSize",
-      "target": "960x1021",
+      "target": "1920x1022",
       "targets": [],
       "value": ""
     }, {
-      "id": "c38ec171-94ac-4bd5-816b-45865c840cbd",
+      "id": "401fcb36-7250-41d9-af48-fe1112a94221",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
@@ -713,7 +713,7 @@
       ],
       "value": ""
     }, {
-      "id": "25f16570-3628-4f26-95fa-a6b47751c301",
+      "id": "54837524-3921-47d9-8e8a-47292ccecc36",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
@@ -725,7 +725,7 @@
       ],
       "value": "marta@gmail.com"
     }, {
-      "id": "4b9a67e5-3efb-484d-8ed3-86f668c8610a",
+      "id": "4b328c8e-9e67-46fe-947e-51ede2764b85",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
@@ -737,7 +737,7 @@
       ],
       "value": ""
     }, {
-      "id": "a82cac12-3942-4980-b250-84c1f7202519",
+      "id": "36325407-9de3-4191-b153-bbacff04129b",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
@@ -749,7 +749,7 @@
       ],
       "value": "corona"
     }, {
-      "id": "681c0a21-e20b-40f6-bc45-1147bc540437",
+      "id": "06c8d46c-98d6-459b-b6f6-1acfb988e6db",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(4)",
@@ -760,7 +760,7 @@
       ],
       "value": ""
     }, {
-      "id": "f4ef5d72-a97f-4efa-9646-9df050f24990",
+      "id": "c24ce2c2-9c32-4b7e-9b1a-f76d372e1bc3",
       "comment": "",
       "command": "assertText",
       "target": "css=.css-text-901oao:nth-child(4)",
@@ -771,7 +771,7 @@
       ],
       "value": "Marta Lopes"
     }, {
-      "id": "50c25c17-5599-4cbf-a3b3-9ab95064e418",
+      "id": "78c59dfc-6a5c-4b41-a213-f84794a7a6cf",
       "comment": "",
       "command": "assertText",
       "target": "css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)",
@@ -782,14 +782,14 @@
       ],
       "value": "Rex"
     }, {
-      "id": "cfaf8d52-167e-41c5-833d-98aa209bb20c",
+      "id": "4e9e7f44-3631-4af9-aa11-c07af5ee5b7d",
       "comment": "",
       "command": "assertTitle",
       "target": "ProfileView",
       "targets": [],
       "value": ""
     }, {
-      "id": "ddff427d-9a9d-423d-9585-1eb2d7ac9710",
+      "id": "be0d4ca2-8725-48c6-8bb0-9077d9fd6bf8",
       "comment": "",
       "command": "click",
       "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)",
@@ -800,7 +800,7 @@
       ],
       "value": ""
     }, {
-      "id": "a893bbe2-7471-4ab9-8ad5-1336ce818012",
+      "id": "b61396a9-82e8-4fe6-945b-598f5200f233",
       "comment": "",
       "command": "assertText",
       "target": "css=.r-flex-13awgt0 > .r-justifyContent-1777fci > .css-text-901oao",
@@ -811,7 +811,7 @@
       ],
       "value": ""
     }, {
-      "id": "3a8bf304-c624-4ca1-b08c-f99b7d887bd2",
+      "id": "744b287f-abf7-4114-94e8-059abc235cf5",
       "comment": "",
       "command": "click",
       "target": "css=.r-flex-13awgt0 > .r-justifyContent-1777fci > .css-text-901oao",
@@ -822,7 +822,7 @@
       ],
       "value": ""
     }, {
-      "id": "be9eb955-28db-4f81-bc9e-fb9cacaa9326",
+      "id": "31130ef0-0e52-4137-b945-ccabe445fa59",
       "comment": "",
       "command": "click",
       "target": "css=.css-textinput-11aywtz:nth-child(1)",
@@ -833,7 +833,7 @@
       ],
       "value": ""
     }, {
-      "id": "1672dcac-a353-4423-8e1f-c9ad477ac61f",
+      "id": "1867666f-c9db-44ad-a9da-21d6e07d5df3",
       "comment": "",
       "command": "type",
       "target": "css=.css-textinput-11aywtz:nth-child(1)",
@@ -842,9 +842,9 @@
         ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div/div[2]/textarea", "xpath:idRelative"],
         ["xpath=//textarea", "xpath:position"]
       ],
-      "value": "Gato perdido em Aveiro"
+      "value": "Gato perdido em Coimbra"
     }, {
-      "id": "23414239-7dc8-4e1b-bdd6-d2a6be658035",
+      "id": "75102248-3d9e-40c0-b750-9576817dcd6e",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(3) > .css-textinput-11aywtz",
@@ -856,19 +856,19 @@
       ],
       "value": ""
     }, {
-      "id": "c7928244-41ab-4740-858f-5a748ef07c2d",
+      "id": "be055e27-f130-41ea-af9d-a7f3c4deb83d",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(3) > .css-textinput-11aywtz",
       "targets": [
         ["css=.css-view-1dbjc4n:nth-child(3) > .css-textinput-11aywtz", "css:finder"],
-        ["xpath=//input[@value='18/01/2021']", "xpath:attributes"],
+        ["xpath=//input[@value='12/01/2021']", "xpath:attributes"],
         ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[3]/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "18/01/2021"
+      "value": "12/01/2021"
     }, {
-      "id": "34c83005-97dc-4a81-ab39-a47408e6cdc8",
+      "id": "03c9fc46-ca10-40d0-80db-17feab35c78d",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-textinput-11aywtz",
@@ -880,19 +880,19 @@
       ],
       "value": ""
     }, {
-      "id": "faa3ccf8-7642-439f-b11e-b2123cdf9d9d",
+      "id": "1bd55041-ddcf-4694-9658-c60d5e33968c",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-textinput-11aywtz",
       "targets": [
         ["css=.css-view-1dbjc4n:nth-child(4) > .css-textinput-11aywtz", "css:finder"],
-        ["xpath=//input[@value='7']", "xpath:attributes"],
+        ["xpath=//input[@value='8']", "xpath:attributes"],
         ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[4]/input", "xpath:idRelative"],
         ["xpath=//div[4]/input", "xpath:position"]
       ],
-      "value": "7"
+      "value": "8"
     }, {
-      "id": "5d745e87-fdeb-4d63-bca9-801766c2edd6",
+      "id": "4dfe8095-b44a-4c92-94a8-71671346a96f",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(5) > .css-textinput-11aywtz",
@@ -904,19 +904,19 @@
       ],
       "value": ""
     }, {
-      "id": "99ece664-5cb2-45d1-b6ff-80999418721e",
+      "id": "082030ee-d1eb-4549-8edf-c72b3d5c7385",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(5) > .css-textinput-11aywtz",
       "targets": [
         ["css=.css-view-1dbjc4n:nth-child(5) > .css-textinput-11aywtz", "css:finder"],
-        ["xpath=//input[@value='Aveiro']", "xpath:attributes"],
+        ["xpath=//input[@value='Coimbra']", "xpath:attributes"],
         ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[5]/input", "xpath:idRelative"],
         ["xpath=//div[5]/input", "xpath:position"]
       ],
-      "value": "Aveiro"
+      "value": "Coimbra"
     }, {
-      "id": "be516cbd-1a2c-45ee-9f00-ab2b04a866ce",
+      "id": "412025c1-1ebe-4047-b6dc-bcfb9badb806",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(6) > .css-textinput-11aywtz",
@@ -928,19 +928,19 @@
       ],
       "value": ""
     }, {
-      "id": "513ca01c-392f-49af-981f-a758b241f60d",
+      "id": "bcf608ec-126c-4b21-b0c8-b081224fc447",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(6) > .css-textinput-11aywtz",
       "targets": [
         ["css=.css-view-1dbjc4n:nth-child(6) > .css-textinput-11aywtz", "css:finder"],
-        ["xpath=//input[@value='Gato de pelo curto']", "xpath:attributes"],
+        ["xpath=//input[@value='Gato Manês']", "xpath:attributes"],
         ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[6]/input", "xpath:idRelative"],
         ["xpath=//div[6]/input", "xpath:position"]
       ],
-      "value": "Gato de pelo curto"
+      "value": "Gato Manês"
     }, {
-      "id": "596d923b-6fb5-444b-bc30-99d594bda4f9",
+      "id": "506a995d-d338-4fb5-88b2-29afdfd1880c",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(7) > .css-textinput-11aywtz",
@@ -952,19 +952,19 @@
       ],
       "value": ""
     }, {
-      "id": "7e84d46d-cc7e-4778-944b-077f090758e0",
+      "id": "9f4a830d-1c66-48d8-9474-257cacf299a8",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(7) > .css-textinput-11aywtz",
       "targets": [
         ["css=.css-view-1dbjc4n:nth-child(7) > .css-textinput-11aywtz", "css:finder"],
-        ["xpath=//input[@value='3']", "xpath:attributes"],
+        ["xpath=//input[@value='4']", "xpath:attributes"],
         ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[7]/input", "xpath:idRelative"],
         ["xpath=//div[7]/input", "xpath:position"]
       ],
-      "value": "3"
+      "value": "4"
     }, {
-      "id": "39e3d047-9d3b-46bf-bc85-6b2232548a72",
+      "id": "e58289c5-099b-4197-bb70-5f0ff748f01e",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(8) > .css-textinput-11aywtz",
@@ -976,19 +976,19 @@
       ],
       "value": ""
     }, {
-      "id": "449c0c7c-a32a-4eaf-a421-8126f1385c63",
+      "id": "1f6e1466-c007-44fb-896c-64be0384c3c6",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(8) > .css-textinput-11aywtz",
       "targets": [
         ["css=.css-view-1dbjc4n:nth-child(8) > .css-textinput-11aywtz", "css:finder"],
-        ["xpath=//input[@value='Preto e branco']", "xpath:attributes"],
+        ["xpath=//input[@value='Preto']", "xpath:attributes"],
         ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[8]/input", "xpath:idRelative"],
         ["xpath=//div[8]/input", "xpath:position"]
       ],
-      "value": "Preto e branco"
+      "value": "Preto"
     }, {
-      "id": "6e92036f-6ec7-4ace-a39b-5cd09da1fcfe",
+      "id": "7e5cd0bf-a505-4db7-b26a-699d9670941f",
       "comment": "",
       "command": "assertText",
       "target": "css=.r-cursor-1loqt21 > .r-fontSize-1i10wst",
@@ -999,7 +999,7 @@
       ],
       "value": "Anunciar"
     }, {
-      "id": "f691e2fa-1d95-4f28-8b53-5a0a996d2c13",
+      "id": "7d4599c9-72cb-4e00-92f6-3312882f993f",
       "comment": "",
       "command": "click",
       "target": "css=.r-cursor-1loqt21 > .r-fontSize-1i10wst",
@@ -1010,7 +1010,7 @@
       ],
       "value": ""
     }, {
-      "id": "228a7978-1124-42f8-864e-bcaaf2ed7eac",
+      "id": "d239d5f0-ca5f-41e3-a947-9543894f8dd1",
       "comment": "",
       "command": "click",
       "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)",
@@ -1021,7 +1021,14 @@
       ],
       "value": ""
     }, {
-      "id": "10a84dcb-e9fe-47ba-8b5c-3f13a8f3f68f",
+      "id": "56ca60bf-9381-4d83-83a1-e3fbb576deca",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef560062-86d3-4996-aaae-5f7c4375073f",
       "comment": "",
       "command": "runScript",
       "target": "window.scrollTo(0,0)",
@@ -1029,24 +1036,24 @@
       "value": ""
     }]
   }, {
-    "id": "ef7c634f-0178-4306-b8ee-50942111d3cd",
-    "name": "procurar_anuncio",
+    "id": "00e7fcfe-b2ce-46c8-b102-9201491d060e",
+    "name": "1_2procurar_anuncio",
     "commands": [{
-      "id": "34998686-a5d1-4d43-a5fe-d5a2a71f4d74",
+      "id": "4599d95f-f5da-46b8-b2e4-c082d31b4f8c",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "cc4d3069-2814-44c8-bbc9-fd3a8f91181b",
+      "id": "aef3bb86-05b4-4b0c-8f7e-cf69c178a3dd",
       "comment": "",
       "command": "setWindowSize",
-      "target": "960x1021",
+      "target": "1920x1022",
       "targets": [],
       "value": ""
     }, {
-      "id": "0b134f77-3fef-48f7-9cba-7e90b09f0359",
+      "id": "9abc669c-955a-411f-a82a-879be2b89255",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
@@ -1058,7 +1065,7 @@
       ],
       "value": ""
     }, {
-      "id": "517f89ae-3798-48cb-a164-9dd39ae17253",
+      "id": "b85ce18d-28bb-4b61-bbbc-a4569267e236",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-textinput-11aywtz",
@@ -1070,7 +1077,7 @@
       ],
       "value": "joao@gmail.com"
     }, {
-      "id": "3039dc9c-c588-48b7-9380-feb02056f5f3",
+      "id": "6d4c4cfe-13e8-4be1-9999-c35b3ee98724",
       "comment": "",
       "command": "click",
       "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
@@ -1082,7 +1089,7 @@
       ],
       "value": ""
     }, {
-      "id": "9eff075a-2f39-45af-bb33-883798bf5ffe",
+      "id": "2596e840-10ff-4a1f-8cec-e8a70a3088d7",
       "comment": "",
       "command": "type",
       "target": "css=.css-view-1dbjc4n:nth-child(3) .css-textinput-11aywtz",
@@ -1094,18 +1101,18 @@
       ],
       "value": "corona"
     }, {
-      "id": "d9533556-2a70-4107-a51a-aef710c42b2a",
+      "id": "0b81216b-4161-4d08-b6d7-aaf74e3cca7e",
       "comment": "",
       "command": "click",
-      "target": "css=.css-view-1dbjc4n:nth-child(4)",
+      "target": "css=.css-view-1dbjc4n:nth-child(4) > .css-text-901oao",
       "targets": [
-        ["css=.css-view-1dbjc4n:nth-child(4)", "css:finder"],
-        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[4]", "xpath:idRelative"],
-        ["xpath=//div[4]", "xpath:position"]
+        ["css=.css-view-1dbjc4n:nth-child(4) > .css-text-901oao", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div/div/div[2]/div[2]/div/div/div/div/div/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "315b6026-3a82-449f-90fe-3ef2a15f13c0",
+      "id": "6b92e2fc-04a4-45da-a387-8664a58e6d2b",
       "comment": "",
       "command": "assertText",
       "target": "css=.css-text-901oao:nth-child(4)",
@@ -1116,7 +1123,7 @@
       ],
       "value": "João Teixeira"
     }, {
-      "id": "34fa3128-5462-42ab-a20e-ccfd5d31e478",
+      "id": "1335bb3e-1070-4f9f-a1a1-57622360bb6d",
       "comment": "",
       "command": "assertText",
       "target": "css=.r-width-13qz1uu > .css-text-901oao:nth-child(3)",
@@ -1127,14 +1134,14 @@
       ],
       "value": "Bigodes"
     }, {
-      "id": "08584109-afff-4f88-9e49-8338b8ecd882",
+      "id": "7356a430-54f1-4edf-b73e-2bdda3834c88",
       "comment": "",
       "command": "assertTitle",
       "target": "ProfileView",
       "targets": [],
       "value": ""
     }, {
-      "id": "d386911f-afcc-4b54-81ca-e7bd7049f268",
+      "id": "d2809481-bd51-4c72-b8c0-d8ef49fcb36d",
       "comment": "",
       "command": "click",
       "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)",
@@ -1145,97 +1152,96 @@
       ],
       "value": ""
     }, {
-      "id": "61d183f2-b48d-4f18-a84b-e988fb338bb6",
+      "id": "d34b794b-7224-47ca-b5f5-5776c631467b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3457d18-81a4-4bbe-a88e-9e580539ba27",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(9) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(9) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[9]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10eaf4d5-7c77-4322-a15a-bb64ce3ee13e",
       "comment": "",
       "command": "assertText",
-      "target": "css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "target": "css=.css-textMultiLine-cens5h",
       "targets": [
-        ["css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(4) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
-        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[4]/div/div[2]/div/div", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[4]/div/div[2]/div/div", "xpath:position"]
+        ["css=.css-textMultiLine-cens5h", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div/div/div/div/div/div[2]", "xpath:position"]
       ],
-      "value": "Gato preto encontrado no parque de Aveiro"
+      "value": "Gato perdido em Coimbra"
     }, {
-      "id": "fb4a3dd5-b6d4-47a4-a1e8-d847ba998031",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "19b629fb-804b-46b0-826d-03e30332bd37",
+      "id": "a7ae98b7-10fd-4dbf-a178-2afd751ef70b",
       "comment": "",
       "command": "assertText",
-      "target": "css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(5) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "target": "css=.r-cursor-1loqt21 > .r-fontSize-1i10wst",
       "targets": [
-        ["css=.css-view-1dbjc4n:nth-child(1) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(5) > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2) > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
-        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[5]/div/div[2]/div/div", "xpath:idRelative"],
-        ["xpath=//div[5]/div/div[2]/div/div", "xpath:position"]
+        ["css=.r-cursor-1loqt21 > .r-fontSize-1i10wst", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:position"]
       ],
-      "value": "Cão encontrado em Viseu"
+      "value": "Encontrei / Este é o meu animal"
     }, {
-      "id": "51ae63f1-9861-4f01-8f97-3d23acf28e07",
+      "id": "68601076-fe6b-408e-9c40-664af5a847a5",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "fd7cc01a-68f6-459c-947b-b8be341636dd",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=.css-view-1dbjc4n:nth-child(6) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "command": "click",
+      "target": "css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)",
       "targets": [
-        ["css=.css-view-1dbjc4n:nth-child(6) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
-        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[6]/div/div[2]/div/div", "xpath:idRelative"],
-        ["xpath=//div[6]/div/div[2]/div/div", "xpath:position"]
+        ["css=.r-flexWrap-tzz3ar > .css-view-1dbjc4n:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div[2]/div[2]/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[4]", "xpath:position"]
       ],
-      "value": "Gatinho perdido"
-    }, {
-      "id": "9d28e892-48ce-44e2-9b30-49df50a67d06",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
       "value": ""
     }, {
-      "id": "7effef8f-a0e2-436e-839b-23df7d7944d1",
+      "id": "e99387b6-a907-4320-9623-c91b4c636896",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "77a412c8-ed74-4e9c-a83b-c6ddaf524938",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=.css-view-1dbjc4n:nth-child(7) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)",
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(9) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2)",
       "targets": [
-        ["css=.css-view-1dbjc4n:nth-child(7) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-text-901oao:nth-child(1)", "css:finder"],
-        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[7]/div/div[2]/div/div", "xpath:idRelative"],
-        ["xpath=//div[7]/div/div[2]/div/div", "xpath:position"]
+        ["css=.css-view-1dbjc4n:nth-child(9) > .css-view-1dbjc4n > .css-view-1dbjc4n > .css-view-1dbjc4n:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[9]/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div[2]/div[2]", "xpath:position"]
       ],
-      "value": "Cão perdido encontrado no bosque"
+      "value": ""
     }, {
-      "id": "fda3b432-712a-45e9-9adf-6f1b8de673ac",
+      "id": "f00ca56a-5a73-4391-8376-20da50a0bcca",
       "comment": "",
       "command": "runScript",
       "target": "window.scrollTo(0,0)",
       "targets": [],
       "value": ""
     }, {
-      "id": "9619b371-496e-4616-acfd-e1acb66ce2a9",
+      "id": "b2626dac-a718-419d-a2c5-2a4e62b95797",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
+      "command": "click",
+      "target": "css=.css-view-1dbjc4n:nth-child(9) .css-accessibilityImage-9pa8cd",
+      "targets": [
+        ["css=.css-view-1dbjc4n:nth-child(9) .css-accessibilityImage-9pa8cd", "css:finder"],
+        ["xpath=//img[contains(@src,'data:image/jpeg;base64,undefined')]", "xpath:img"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div/div[2]/div[2]/div/div/div/div/div/div/div[9]/div/div/img", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div/img", "xpath:position"]
+      ],
       "value": ""
     }, {
-      "id": "b4218912-4b79-43a4-a9bb-921a30826c05",
+      "id": "3d984216-a32f-4e03-8e05-736fcb36b018",
       "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
+      "command": "click",
+      "target": "css=.r-cursor-1loqt21 > .r-fontSize-1i10wst",
+      "targets": [
+        ["css=.r-cursor-1loqt21 > .r-fontSize-1i10wst", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div[2]/div/div[4]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div/div/div/div[2]/div[2]", "xpath:position"]
+      ],
       "value": ""
     }]
   }],
