@@ -10,7 +10,7 @@ function AllSitterView({navigation}) {
       <Location />
       <SitterItem
         name="André Patacas"
-        img_uri="http://148.63.171.198:90/img/team/01.jpg"
+        img_uri="http://unn4m3dd.xyz/img/team/01.jpg"
         description="Cuidador especialista em robôs assassinos"
         stared={true}
         price={15}
@@ -21,7 +21,7 @@ function AllSitterView({navigation}) {
       />
       <SitterItem
         name="Denis Yamunaque"
-        img_uri="http://148.63.171.198:90/img/team/02.jpg"
+        img_uri="http://unn4m3dd.xyz/img/team/02.jpg"
         description="Cuidador especialista em gatos"
         price={7}
         stars_initial={92}
@@ -29,7 +29,7 @@ function AllSitterView({navigation}) {
       />
       <SitterItem
         name="Luísa Amaral"
-        img_uri="http://148.63.171.198:90/img/team/03.jpg"
+        img_uri="http://unn4m3dd.xyz/img/team/03.jpg"
         description="Cuidador especialista em cavaliers"
         price={12}
         stars_initial={240}
@@ -38,7 +38,7 @@ function AllSitterView({navigation}) {
       />
       <SitterItem
         name="Pedro Loureiro"
-        img_uri="http://148.63.171.198:90/img/team/04.jpg"
+        img_uri="http://unn4m3dd.xyz/img/team/04.jpg"
         description="Cuidador especialista em cães de grande porte"
         price={13}
         stars_initial={220}
